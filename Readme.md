@@ -1,6 +1,5 @@
-\#Teammitglieder * * \*
+\#Teammitglieder *PH *AM \*ME
 
-\#Forschungsfrage “Welche Faktoren beeinflussen die Akzeptanz veganer
-Ersatzprodukte in der Ernährung zwischen Gen Z und Millennials?”
+\#Forschungsfrage
 
 \#Faktorenraum Hier wird später ein Bild eingebunden
