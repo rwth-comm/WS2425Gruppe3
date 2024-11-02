@@ -1,4 +1,4 @@
-\#Teammitglieder *PH *AM \*ME
+\#Teammitglieder \* ME \* PH \* AM
 
 \#Forschungsfrage
 

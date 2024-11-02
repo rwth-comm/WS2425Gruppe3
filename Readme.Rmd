@@ -1,16 +1,14 @@
 ---
 title: "Untitled"
 output: md_document
-date: "2024-10-23"
+date: "2024-11-02"
 ---
-
-
 #Teammitglieder
-*PH
-*AM
-*ME
+* ME
+* PH
+* AM
 
-#Forschungsfrage
+#Forschungsfrage 
 
 #Faktorenraum
 Hier wird später ein Bild eingebunden
