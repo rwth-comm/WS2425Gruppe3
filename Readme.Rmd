@@ -12,4 +12,4 @@ date: "2024-11-02"
 Welche Akzeptanz-Faktoren beeinflussen die Nutzung eines KI-Chatbots zur Informationsvermittlung auf der Homepage der Kommunalverwaltung? - Am Beispiel Deutscher Großstädte
 
 #Faktorenraum
-(readme_files/Faktorenraum.JPG)
+![Faktorenraum](readme_files/Faktorenraum.JPG)
