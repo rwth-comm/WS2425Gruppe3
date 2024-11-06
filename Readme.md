@@ -4,4 +4,4 @@
 eines KI-Chatbots zur Informationsvermittlung auf der Homepage der
 Kommunalverwaltung? - Am Beispiel Deutscher Großstädte
 
-\#Faktorenraum Hier wird später ein Bild eingebunden
+\#Faktorenraum (readme\_files/Faktorenraum.JPG)
