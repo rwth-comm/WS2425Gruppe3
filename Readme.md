@@ -5,3 +5,5 @@ eines KI-Chatbots zur Informationsvermittlung auf der Homepage der
 Kommunalverwaltung? - Am Beispiel Deutscher Großstädte
 
 \#Faktorenraum ![Faktorenraum](readme_files/Faktorenraum.JPG)
+
+\#Operationalisierung
