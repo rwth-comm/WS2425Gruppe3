@@ -10,7 +10,7 @@ Welche Akzeptanz-Faktoren beeinflussen die Nutzung eines KI-Chatbots zur
 Informationsvermittlung auf der Homepage der Kommunalverwaltung? - Am
 Beispiel Deutscher Großstädte
 
-\#F aktorenraum ![Faktorenraum](readme_files/Faktorenraum.JPG)
+# Faktorenraum ![Faktorenraum](readme_files/Faktorenraum.JPG)
 
 # Operationalisierung
 
