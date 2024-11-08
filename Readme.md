@@ -6,9 +6,9 @@
 
 # Forschungsfrage
 
-Welche Akzeptanz-Faktoren beeinflussen die Nutzung eines KI-Chatbots zur
-Informationsvermittlung auf der Homepage der Kommunalverwaltung? - Am
-Beispiel Deutscher Großstädte
+Welche Faktoren beeinflussen die Akzeptanz der Nutzung eines KI-Chatbots
+zur Informationsvermittlung auf der Homepage der Kommunalverwaltung? -
+Am Beispiel Deutscher Großstädte
 
 # Faktorenraum
 
