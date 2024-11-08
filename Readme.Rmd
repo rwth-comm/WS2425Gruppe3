@@ -11,8 +11,8 @@ date: "2024-11-02"
 # Forschungsfrage 
 Welche Akzeptanz-Faktoren beeinflussen die Nutzung eines KI-Chatbots zur Informationsvermittlung auf der Homepage der Kommunalverwaltung? - Am Beispiel Deutscher Großstädte
 
-#F aktorenraum
+# Faktorenraum
 ![Faktorenraum](readme_files/Faktorenraum.JPG)
 
 # Operationalisierung
-Wir behandeln die Variable der Benutzerfreundlichkeit und verwenden dafür die "System Usability Scale" in X Items.
+Wir behandeln die Variable der Benutzerfreundlichkeit und verwenden dafür die "System Usability Scale" in 10 Items.
