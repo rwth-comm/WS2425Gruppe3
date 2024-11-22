@@ -1,9 +1,103 @@
-\#Teammitglieder \* ME \* PH \* AM
+# Teammitglieder
 
-\#Forschungsfrage Welche Akzeptanz-Faktoren beeinflussen die Nutzung
-eines KI-Chatbots zur Informationsvermittlung auf der Homepage der
-Kommunalverwaltung? - Am Beispiel Deutscher Großstädte
+-   ME
+-   PH
+-   AM
 
-\#Faktorenraum ![Faktorenraum](readme_files/Faktorenraum.JPG)
+# Forschungsfrage
 
-\#Operationalisierung
+Welche Faktoren beeinflussen die Akzeptanz eines KI-Chatbots zur
+Informationsvermittlung auf der Homepage der Kommunalverwaltung? - Am
+Beispiel Deutscher Großstädter
+
+# Faktorenraum
+
+<figure>
+<img src="readme_files/FaktorenraumNEU.drawio.png" alt="Faktorenraum" />
+<figcaption aria-hidden="true">Faktorenraum</figcaption>
+</figure>
+
+# Operationalisierung
+
+Wir behandeln die Variable der Benutzerfreundlichkeit und verwenden
+dafür die “System Usability Scale” in 10 Items.
+
+Benutzerfreundlichkeit: System Usability Scale (SUS) nach [Lewis
+(2018)](https://doi.org/10.1080/10447318.2018.1455307 "Lewis, J. R. (2018). The System Usability Scale: Past, Present, and Future. International Journal of Human-Computer Interaction, 34(7), 577–590. https://doi.org/10.1080/10447318.2018.1455307"),
+übersetzt nach QUELLE in 10 Items.
+
+# Hypothesen
+
+Einfache Zusammenhangshypothesen
+
+1.  Es gibt einen Zusammenhang zwischen zwischen dem Alter und der
+    Nutzungsintention eines KI-Chatbots —&gt; Pearson-Korrelation
+
+> Passt! Aber da Sie nur einen Chatbot betrachten, können Sie hier “des
+> KI-Chatbots” schreiben, oder das komplett weglassen: Es gibt einen
+> Zusammenhang zwischen Alter und Nutzungsintention. Haben Sie hier eine
+> Vermutung über die Richtung des Zusammenhangs?
+
+1.  Es gibt einen Zusammenhang zwischen der Technikaffinität einer
+    Person und der Nutzungsintention eines KI-Chatbots —&gt;
+    Pearson-Korrelation
+
+> “Einer Person” und “eines KI-Chatbots” könnte weg, aber das ist
+> Geschmackssache. Hypothese passt!
+
+1.  Es gibt einen Zusammenhang zwischen der Benutzerfreundlichkeit eines
+    KI-Chatbots und dessen Nutzungsintention —&gt;Pearson-Korrelation
+
+> Vorsicht, das klingt so als wären das Eigenschaften des Chatbots.
+> Benutzerfreundlichkeit ist etwas, was Nutzer dem Chatbot zuschreiben.
+> Das würde sich aber aus dem Kontext ergeben, ich fänd “Es gibt einen
+> Zusammenhang zwischen Benutzerfreundlichkeit und Nutzungsintention”
+> völlig okay.
+
+Einfache Unterschiedshypothesen
+
+1.  Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots
+    zwischen Personen, die ihn als benutzerfreundlich wahrnehmen und
+    Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt
+    einen Unterschied in der Nutzungsintention eines KI-Chatbots in
+    Abhängigkeit von der wahrgenommenen Benutzerfreundlichkeit —&gt;
+    unverbundener T-Test
+
+> Hier ist die Zusammenhangshypothese besser, weil sie die Streuung in
+> der UV nicht zerstört.
+
+1.  Es gibt einen Unterschied in der Nutzungsintention des KI-Chatbots
+    in der Kommunalverwaltung zwischen Bürgern, die den Zeitaufwand als
+    gering wahrnehmen und Bürgern, die ihn als hoch wahrnehmen/ Der
+    wahrgenommene Zeitaufwand beeinflusst die Nutzungsintention des
+    KI-Chatbots in der Kommunalverwaltung —&gt; unverbundener T-Test
+
+> Finde ich inhaltlich gut, hat aber das selbe Problem, wie die
+> Hypothese davor.
+
+1.  Personen mit einer aufgeschlossenen Persönlichkeit haben eine höhere
+    Nutzungsintention eines KI-Chatbots in der Kommunalverwaltung als
+    Personen mit einer weniger aufgeschlossenen Persönlichkeit. -&gt;
+    unverbundener T-Test
+
+> Ebenso :-) Lassen Sie uns im Seminar da nochmal drüber sprechen. Hier
+> hätte ich noch als Kritikpunkt, dass der Persönlichkeitsfaktor nicht
+> deutlich wird. Welcher Big-5 Faktor ist gemeint? Offenheit?
+> Gewissenhaftigkeit?
+
+Komplexe Zusammenhangshypothese
+
+1.  Je höher der Bildungsgrad und die Technikaffinität einer Person,
+    desto bewusster ist die Nutzungsintention eines KI-Chatbots.
+
+> Passt! :-)
+
+Komplexe Unterschiedshypothese
+
+1.  Der Wohnort (ländlich, städtisch) in dem der Schulabschluss
+    (niedriger Schulabschluss, mittlerer Schulabschluss, hoher
+    Schulabschluss) absolviert, wurde hat einen Einfluss auf die
+    Nutzungsintention.
+
+> Vorsicht :D Das klingt, als würden wir wirklich fragen, wo der
+> Schulabschluss erworben wurde. Sonst finde ich das inhaltlich super!
