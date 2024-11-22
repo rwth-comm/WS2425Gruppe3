@@ -2,11 +2,14 @@ library(tidyverse)
 library(dataforsocialscience)
 library(psych)
 
+install.packages("remotes")
+remotes::install_github("statisticsforsocialscience/dataforsocialscience")
+
 df <- robo_care
 
 ## Übung 1: Boxplot und Histogram ----
 
-meine_variable <- df$privacy_concerns
+meine_variable <- df$care_experience
 hist(meine_variable)
 hist(meine_variable, breaks = 19)
 
@@ -45,7 +48,7 @@ hist(meine_z_standardisierte_variable)
 
 ## Übung 6: Visueller Vergleich Variable und Normalverteilung ----
 
-plot(density(meine_variable), col = "red")
+plot(density(meine_variable), col = "red") 
 lines(density(mynorm), col = "blue")
 
 ## Übung 7: Binärer Geschlechtervergleich im Densityplot ----
