@@ -60,15 +60,9 @@ T-Test
 > Finde ich inhaltlich gut, hat aber das selbe Problem, wie die
 > Hypothese davor.
 
-1.  Personen mit einer aufgeschlossenen Persönlichkeit haben eine höhere
-    Nutzungsintention eines KI-Chatbots in der Kommunalverwaltung als
-    Personen mit einer weniger aufgeschlossenen Persönlichkeit. -&gt;
-    unverbundener T-Test
-
-> Ebenso :-) Lassen Sie uns im Seminar da nochmal drüber sprechen. Hier
-> hätte ich noch als Kritikpunkt, dass der Persönlichkeitsfaktor nicht
-> deutlich wird. Welcher Big-5 Faktor ist gemeint? Offenheit?
-> Gewissenhaftigkeit?
+1.  Personen die offener sind haben eine höhere Nutzungsintention eines
+    KI-Chatbots in der Kommunalverwaltung als Personen, die weniger
+    offen sind. -&gt; unverbundener T-Test
 
 Komplexe Zusammenhangshypothese
 
