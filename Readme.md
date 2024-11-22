@@ -77,7 +77,6 @@ Komplexe Zusammenhangshypothese
 
 Komplexe Unterschiedshypothese
 
-Ob der Schulabschluss (niedriger Schulabschluss, mittlerer
-Schulabschluss, hoher Schulabschluss) in einer ländlichen oder
-städtischen Gegend absolviert wurde hat einen Einfluss auf die
-Nutzungsintention.
+Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
+hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend)
+hat einen Einfluss auf die Nutzungsintention.
