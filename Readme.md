@@ -36,33 +36,22 @@ Nutzungsintention. Pearson-Korrelation
 1.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
     Nutzungsintention —&gt; Pearson-Korrelation
 
-2.  Es gibt einen Zusammenhang zwischen Benutzerfreundlichkeit
-    Nutzungsintention —&gt;Pearson-Korrelation
+2.  Es gibt einen Zusammenhang zwischen der wahrgenommenen
+    Benutzerfreundlichkeit und Nutzungsintention —&gt;
+    Pearson-Korrelation
 
-Einfache Unterschiedshypothesen
-
-Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots
-zwischen Personen, die ihn als benutzerfreundlich wahrnehmen und
-Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt
+Es gibt einen Zusammenhang zwischen in der Nutzungsintention eines
+KI-Chatbots zwischen Personen, die ihn als benutzerfreundlich wahrnehmen
+und Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt
 einen Unterschied in der Nutzungsintention eines KI-Chatbots in
 Abhängigkeit von der wahrgenommenen Benutzerfreundlichkeit unverbundener
 T-Test
 
-> Hier ist die Zusammenhangshypothese besser, weil sie die Streuung in
-> der UV nicht zerstört.
+1.  Es gibt einen zusammenhang zwischen der Nutzungsintention und dem
+    wahrgenommenen Zeitaufwand. —&gt; Pearson-Korrelation
 
-1.  Es gibt einen Unterschied in der Nutzungsintention des KI-Chatbots
-    in der Kommunalverwaltung zwischen Bürgern, die den Zeitaufwand als
-    gering wahrnehmen und Bürgern, die ihn als hoch wahrnehmen/ Der
-    wahrgenommene Zeitaufwand beeinflusst die Nutzungsintention des
-    KI-Chatbots in der Kommunalverwaltung —&gt; unverbundener T-Test
-
-> Finde ich inhaltlich gut, hat aber das selbe Problem, wie die
-> Hypothese davor.
-
-1.  Personen die offener sind haben eine höhere Nutzungsintention eines
-    KI-Chatbots in der Kommunalverwaltung als Personen, die weniger
-    offen sind. -&gt; unverbundener T-Test
+2.  Es gibt eine Zusammenhang zwischen Nutzungsintention und der
+    Offenheit einer Person. -&gt; Pearson-Korrelation
 
 Komplexe Zusammenhangshypothese
 

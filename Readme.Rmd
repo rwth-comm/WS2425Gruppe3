@@ -32,25 +32,21 @@ Pearson-Korrelation
 2. Es gibt einen Zusammenhang zwischen der Technikaffinität und der Nutzungsintention
 —> Pearson-Korrelation
 
-3. Es gibt einen Zusammenhang zwischen Benutzerfreundlichkeit Nutzungsintention
-—>Pearson-Korrelation 
+3. Es gibt einen Zusammenhang zwischen der wahrgenommenen Benutzerfreundlichkeit und Nutzungsintention
+—> Pearson-Korrelation 
 
 
-Einfache Unterschiedshypothesen
 
-Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots zwischen Personen, die ihn als benutzerfreundlich wahrnehmen und Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots in Abhängigkeit von der wahrgenommenen Benutzerfreundlichkeit
+Es gibt einen Zusammenhang zwischen in der Nutzungsintention eines KI-Chatbots zwischen Personen, die ihn als benutzerfreundlich wahrnehmen und Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots in Abhängigkeit von der wahrgenommenen Benutzerfreundlichkeit
 unverbundener T-Test 
 
-> Hier ist die Zusammenhangshypothese besser, weil sie die Streuung in der UV nicht zerstört. 
 
-2. Es gibt einen Unterschied in der Nutzungsintention des KI-Chatbots in der Kommunalverwaltung zwischen Bürgern, die den Zeitaufwand als gering wahrnehmen und Bürgern, die ihn als hoch wahrnehmen/ Der wahrgenommene Zeitaufwand beeinflusst die Nutzungsintention des KI-Chatbots in der Kommunalverwaltung 
-—> unverbundener T-Test
+2. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem wahrgenommenen Zeitaufwand. 
+—> Pearson-Korrelation 
 
-> Finde ich inhaltlich gut, hat aber das selbe Problem, wie die Hypothese davor. 
 
-3. Personen die offener sind haben eine höhere Nutzungsintention eines KI-Chatbots in der Kommunalverwaltung als Personen, die weniger offen sind. 
--> unverbundener T-Test 
-
+3. Es gibt eine Zusammenhang zwischen Nutzungsintention und der Offenheit einer Person. 
+-> Pearson-Korrelation 
 
 Komplexe Zusammenhangshypothese
 
