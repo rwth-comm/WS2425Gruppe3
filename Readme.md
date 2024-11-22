@@ -79,4 +79,4 @@ Komplexe Unterschiedshypothese
 
 Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
 hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend)
-hat einen Einfluss auf die Nutzungsintention.
+haben einen Einfluss auf die Nutzungsintention.
