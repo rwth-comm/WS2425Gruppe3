@@ -35,11 +35,7 @@ Pearson-Korrelation
 3. Es gibt einen Zusammenhang zwischen der wahrgenommenen Benutzerfreundlichkeit und Nutzungsintention
 —> Pearson-Korrelation 
 
-
-
-Es gibt einen Zusammenhang zwischen in der Nutzungsintention eines KI-Chatbots zwischen Personen, die ihn als benutzerfreundlich wahrnehmen und Personen, die ihn als weniger benutzerfreundlich wahrnehmen/ Es gibt einen Unterschied in der Nutzungsintention eines KI-Chatbots in Abhängigkeit von der wahrgenommenen Benutzerfreundlichkeit
-unverbundener T-Test 
-
+Die Nutzungsintention unterscheidet sich bei Personen die der Kommunalverwaltung gegenüber postiv eingestellt sind im Vergleich zu Personen, die der Kommunalverwaltung gegenüber negativ eingestellt sind/ Es gibt einen Zusammenhang zwischen der Nutzungsintention und der generellen Einstellung gegenüber der Kommunalverwaltung 
 
 2. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem wahrgenommenen Zeitaufwand. 
 —> Pearson-Korrelation 
