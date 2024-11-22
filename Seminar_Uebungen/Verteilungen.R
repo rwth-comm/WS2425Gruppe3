@@ -6,7 +6,7 @@ df <- robo_care
 
 ## Übung 1: Boxplot und Histogram ----
 
-meine_variable <- df$privacy_concerns
+meine_variable <- df$care_experience
 hist(meine_variable)
 hist(meine_variable, breaks = 19)
 
