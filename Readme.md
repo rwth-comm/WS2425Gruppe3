@@ -34,10 +34,10 @@ Einfache Zusammenhangshypothesen
     Nutzungsintention. -&gt; Pearson-Korrelation
 
 2.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
-    Nutzungsintention —&gt; Pearson-Korrelation
+    Nutzungsintention -&gt; Pearson-Korrelation
 
 3.  Es gibt einen Zusammenhang zwischen der wahrgenommenen
-    Benutzerfreundlichkeit und Nutzungsintention —&gt;
+    Benutzerfreundlichkeit und Nutzungsintention -&gt;
     Pearson-Korrelation
 
 4.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und der
@@ -45,7 +45,7 @@ Einfache Zusammenhangshypothesen
     Pearson-Korrelation
 
 5.  Es gibt einen zusammenhang zwischen der Nutzungsintention und dem
-    wahrgenommenen Zeitaufwand. —&gt; Pearson-Korrelation
+    wahrgenommenen Zeitaufwand. -&gt; Pearson-Korrelation
 
 6.  Es gibt eine Zusammenhang zwischen Nutzungsintention und der
     Offenheit einer Person. -&gt; Pearson-Korrelation

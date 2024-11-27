@@ -30,16 +30,16 @@ Einfache Zusammenhangshypothesen
 -> Pearson-Korrelation 
 
 2. Es gibt einen Zusammenhang zwischen der Technikaffinität und der Nutzungsintention
-—> Pearson-Korrelation
+-> Pearson-Korrelation
 
 3. Es gibt einen Zusammenhang zwischen der wahrgenommenen Benutzerfreundlichkeit und Nutzungsintention
-—> Pearson-Korrelation 
+-> Pearson-Korrelation 
 
 4. Es gibt einen Zusammenhang zwischen der Nutzungsintention und der generellen Einstellung gegenüber der Kommunalverwaltung 
 -> Pearson-Korrelation
 
 5. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem wahrgenommenen Zeitaufwand. 
-—> Pearson-Korrelation 
+-> Pearson-Korrelation 
 
 
 6. Es gibt eine Zusammenhang zwischen Nutzungsintention und der Offenheit einer Person. 
