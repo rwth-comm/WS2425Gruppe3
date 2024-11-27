@@ -26,8 +26,8 @@ Benutzerfreundlichkeit: System Usability Scale (SUS) nach [Lewis (2018)](https:/
 
 Einfache Zusammenhangshypothesen
 
-Es gibt einen Zusammenhang zwischen zwischen dem Alter und der Nutzungsintention.
-Pearson-Korrelation 
+1. Es gibt einen Zusammenhang zwischen zwischen dem Alter und der Nutzungsintention.
+-> Pearson-Korrelation 
 
 2. Es gibt einen Zusammenhang zwischen der Technikaffinität und der Nutzungsintention
 —> Pearson-Korrelation
@@ -35,21 +35,23 @@ Pearson-Korrelation
 3. Es gibt einen Zusammenhang zwischen der wahrgenommenen Benutzerfreundlichkeit und Nutzungsintention
 —> Pearson-Korrelation 
 
-Die Nutzungsintention unterscheidet sich bei Personen die der Kommunalverwaltung gegenüber postiv eingestellt sind im Vergleich zu Personen, die der Kommunalverwaltung gegenüber negativ eingestellt sind/ Es gibt einen Zusammenhang zwischen der Nutzungsintention und der generellen Einstellung gegenüber der Kommunalverwaltung 
+4. Es gibt einen Zusammenhang zwischen der Nutzungsintention und der generellen Einstellung gegenüber der Kommunalverwaltung 
+-> Pearson-Korrelation
 
-2. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem wahrgenommenen Zeitaufwand. 
+5. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem wahrgenommenen Zeitaufwand. 
 —> Pearson-Korrelation 
 
 
-3. Es gibt eine Zusammenhang zwischen Nutzungsintention und der Offenheit einer Person. 
+6. Es gibt eine Zusammenhang zwischen Nutzungsintention und der Offenheit einer Person. 
 -> Pearson-Korrelation 
 
 Komplexe Zusammenhangshypothese
 
 1. Je höher der Bildungsgrad und die Technikaffinität einer Person, desto bewusster ist die Nutzungsintention eines KI-Chatbots.
-
+-> Multiple lineare Regression
 
 Komplexe Unterschiedshypothese
 
-Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss, hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend) haben einen Einfluss auf die Nutzungsintention.
+1. Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss, hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend) haben einen Einfluss auf die Nutzungsintention.
+-> ANOVA
 
