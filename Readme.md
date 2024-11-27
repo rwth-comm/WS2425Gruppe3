@@ -56,6 +56,10 @@ Komplexe Zusammenhangshypothese
     desto bewusster ist die Nutzungsintention eines KI-Chatbots. -&gt;
     Multiple lineare Regression
 
+2.  Die Nutzungsintention eines KI-Chatbots ist abhängig vom Geschlecht
+    und der Technikaffinität einer Person. -&gt; Multiple lineare
+    Regression
+
 Komplexe Unterschiedshypothese
 
 1.  Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
