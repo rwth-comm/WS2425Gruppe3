@@ -84,3 +84,7 @@ Komplexe Unterschiedshypothese
 1.  Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
     hoher Schulabschluss) und Wohnort (ländlichen oder städtischen
     Gegend) haben einen Einfluss auf die Nutzungsintention. -&gt; ANOVA
+
+\#Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten
+bei 0.2677066 liegen, um bei einem Signifikanzniveau von 0,05 detektiert
+zu werden. Somit ist das ein schwacher bis mittelstarker Effekt
