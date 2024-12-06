@@ -30,15 +30,22 @@ Wohnort:ordinalskaliert
 
 Bildungsgrad:ordinalskaliert
 
-Persönlichkeit (Big 5): intervallskaliert -> Likert-Skala
+Persönlichkeit (Big 5): intervallskaliert -> Likert-Skala (10 Items) https://zis.gesis.org/skala/Rammstedt-Kemper-Klein-Beierlein-Kovaleva-Big-Five-Inventory-(BFI-10)
 
-Technikaffinität (ATI): intervallskaliert -> Likert-Skala
+Technikaffinität (ATI): intervallskaliert -> Likert-Skala (9 Items) https://ati-scale.org/assets/scales/ati-scala_german_2022-02-25.pdf
 
-Einstellung zur Kommunalverwaltung: intervallskaliert -> Likert-Skala
+Einstellung zur Kommunalverwaltung: intervallskaliert -> Likert-Skala (4 Items) 
+unpublizierte Masterarbeit am HCIC
 
-Benutzerfreundlichkeit: intervallskaliert -> Likert-Skala
+Benutzerfreundlichkeit: intervallskaliert -> Likert-Skala (5 Items) 
+Items selbst formuliert in Ahnlehnung an Verständlichkeit von https://github.com/moritzkoerber/TiA_Trust_in_Automation_Questionnaire/blob/master/Vertrauen-in-Automation_TiA_Fragebogen.pdf
 
-Zeitaufwand: intervallskaliert -> Likert-Skala
+Zeitersparnis: intervallskaliert -> Likert-Skala (2 Items) 
+Operationaliserung stellt Forschungslücke dar, Itemformulierung mit ChatGPT resultiert in reflektiver Skala
+
+Erwartung an Zeitaufwand/Zeiteffizienz: intervallskaliert -> Likert-Skala (2 Items) 
+Operationaliserung stellt Forschungslücke dar, Items in Anlehnung an ChatGPT umformuliert
+
 
 # Hypothesen 
 
