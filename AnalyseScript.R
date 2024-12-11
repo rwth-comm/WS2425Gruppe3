@@ -67,16 +67,17 @@ raw.short$Wohnort %>%
 # Skalenwerte berechnen ----
 
 schluesselliste <- list(
-  BF_Extraversion = c("-bf_1n","bf_6"),
-  BF_Agreeableness = c("bf_2","-bf_7n"),
-  BF_Openness = c("-bf_5n", "bf_10"),
-  BF_Neuroticism = c("-bf_4n", "bf_9"),
-  BF_Concientiousness= c("-bf_3n", "bf_8"),
-  ATI = vars4psych(raw.short, "ati"), 
-  PRO = c("wrfq_1","wrfq_2","wrfq_3","wrfq_4","wrfq_9"),
-  PRE = c("wrfq_5","wrfq_6","wrfq_7","wrfq_8"),
-  SVI = vars4psych(raw.short, "svi")
+  BF_Offenheit = c("big5_1", "big5_2n"),
+  ATI = vars4psych(raw.short, "ati"),
+  Behörden = c("behörden_1", "behörden_2", "behörden_3", "behörden_4", "behörden_5", "behörden_6n"),
+  Szenario_B = c("sz_B_1", "sz_B_2", "sz_B_3", "sz_B_4", "sz_B_5", "sz_B_6"),
+  Privatsphäre = c("privat_B_1n", "privat_B_2n", "privat_B_3n", "privat_B_4", "privat_B_5"),
+  Vertrauen = c("vertrauen_B_1", "vertrauen_B_2"),
+  Bedienbarkeit = c("bedienenb_B_1", "bedienenb_B_2", "bedienenb_B_3", "bedienenb_B_4", "bedienenb_B_5"),
+  Zeitersparnis = c("zeit_B_1", "zeit_B_2"),
+  Szenarien = c("FL_15_DO_SzenarioA", "FL_15_DO_SzenarioB", "FL_15_DO_SzenarioC")
 )
+
 
 scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
 
