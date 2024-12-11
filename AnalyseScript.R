@@ -52,14 +52,15 @@ raw.short$Bildungsabschluss %>%
                      "Hauptschulabschluss",
                      "Realschulabschluss",
                      "Abitur",
-                     "Hochschulabschluss")) -> raw.short$Edu
+                     "Hochschulabschluss")) -> raw.short$Bildungsabschluss 
 
-raw.short$Bildungsabschluss %>%  recode(`1` = "(noch) kein Schulabschluss", 
-                              `2` = "Hauptschulabschluss",
-                              `3` = "Realschulabschluss",
-                              `4` = "Abitur",
-                              `5` = "Hochschulabschluss") %>% 
-  as.factor() -> raw.short$Bildungsabschluss
+raw.short$Wohnort %>%
+  ordered(levels = c(1:3),
+          labels = c("Ländlich", 
+                     "Vorort/Kleinstadt", 
+                     "Großstadt")) -> raw.short$Wohnort
+
+
 
 # Qualitätskontrolle ----
 
