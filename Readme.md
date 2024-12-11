@@ -60,25 +60,25 @@ Items in Anlehnung an ChatGPT umformuliert
 
 Einfache Zusammenhangshypothesen
 
-1.  Es gibt einen Zusammenhang zwischen zwischen dem Alter und der
-    Nutzungsintention. -&gt; Pearson-Korrelation
+1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
+    den KI-Chatbot. -&gt; Pearson-Korrelation
 
 2.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
-    Nutzungsintention -&gt; Pearson-Korrelation
+    Privatsphärewahrnehmung -&gt; Pearson-Korrelation
 
 3.  Es gibt einen Zusammenhang zwischen der wahrgenommenen
     Benutzerfreundlichkeit und Nutzungsintention -&gt;
     Pearson-Korrelation
 
-4.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und der
-    generellen Einstellung gegenüber der Kommunalverwaltung -&gt;
-    Pearson-Korrelation
+4.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
+    gegenüber der Kommunalverwaltung und dem Vertrauen in den
+    KI-Chatbot. -&gt; Pearson-Korrelation
 
 5.  Es gibt einen zusammenhang zwischen der Nutzungsintention und dem
-    wahrgenommenen Zeitaufwand. -&gt; Pearson-Korrelation
+    Zeitaufwand. -&gt; Pearson-Korrelation
 
-6.  Es gibt eine Zusammenhang zwischen Nutzungsintention und der
-    Offenheit einer Person. -&gt; Pearson-Korrelation
+6.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
+    der Offenheit einer Person. -&gt; Pearson-Korrelation
 
 Komplexe Zusammenhangshypothese
 
