@@ -1,0 +1,10 @@
+variable;variable_old;item;text;info
+Status;Status;NA;Antworttyp;"{""ImportId"":""status""}"
+Progress;Progress;NA;Aktueller Stand;"{""ImportId"":""progress""}"
+Duration (in seconds);Duration (in seconds);NA;Dauer (in Sekunden);"{""ImportId"":""duration""}"
+Finished;Finished;NA;Beendet;"{""ImportId"":""finished""}"
+Bildungsabschluss;Bildungsabschluss;NA;Was ist ihr höchster Bildungsabschluss?;"{""ImportId"":""QID5""}"
+Wohnort;Wohnort;NA;Was beschreibt ihren aktuellen Wohnort am ehesten?;"{""ImportId"":""QID6""}"
+FL_15_DO_SzenarioA;FL_15_DO_SzenarioA;Block Randomizer;FL_15 - Block Randomizer - Display Order - SzenarioA;"{""ImportId"":""FL_15_DO"",""choiceId"":""SzenarioA""}"
+FL_15_DO_SzenarioB;FL_15_DO_SzenarioB;Block Randomizer;FL_15 - Block Randomizer - Display Order - SzenarioB;"{""ImportId"":""FL_15_DO"",""choiceId"":""SzenarioB""}"
+FL_15_DO_SzenarioC;FL_15_DO_SzenarioC;Block Randomizer;FL_15 - Block Randomizer - Display Order - SzenarioC;"{""ImportId"":""FL_15_DO"",""choiceId"":""SzenarioC""}"

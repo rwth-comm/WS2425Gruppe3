@@ -21,7 +21,7 @@ raw.short <- raw[,c(-1,-2,-4,-8:-18,-23,-26:-28,-38:-49,-56:-77,-98:-111)]
 
 dput(names(raw.short))
 
-names(raw.short) <- c("Status", "Progress", "Duration (in seconds)", "Finished", "gender", "age", "Bildungsabschluss", "Wohnort", 
+names(raw.short) <- c("Status", "Progress", "Duration (in seconds)", "Finished", "Gender", "Age", "Bildungsabschluss", "Wohnort", 
                       "big5_1", "big5_2n", 
                       "ati_1", "ati_2", "ati_3n", "ati_4", "ati_5", "ati_6n", "ati_7", "ati_8n", "ati_9", 
                       "behörden_1", "behörden_2", "behörden_3", "behörden_4", "behörden_5", "behörden_6n", 
@@ -42,25 +42,24 @@ raw.short$Age %>%
   as.numeric() -> raw.short$Age
 
 raw.short$Gender %>% 
-  recode(`1` = "Männlich", `2` = "Weiblich", `3` = "Divers") %>% 
+  recode(`1` = "Männlich", `2` = "Weiblich", `3` = "Divers", `4`= "keine Angabe") %>% 
   as.factor() -> raw.short$Gender
 
 
-raw.short$Edu %>% 
+raw.short$Bildungsabschluss %>% 
   ordered(levels = c(1:5),
-          labels = c("Haupt- oder Realschulabschluss",
-                     "Fach-/Hochschulreife (Abitur)",
-                     "Ausbildung",
-                     "Hochschulabschluss",
-                     "Promotion")) -> raw.short$Edu
+          labels = c("(noch) kein Schulabschluss", 
+                     "Hauptschulabschluss",
+                     "Realschulabschluss",
+                     "Abitur",
+                     "Hochschulabschluss")) -> raw.short$Edu
 
-raw.short$JobType %>%  recode(`1` = "In Ausbildung / Studium", 
-                              `2` = "Arbeitnehmer/-in und Studierende/-r",
-                              `3` = "Arbeitnehmer/-in",
-                              `4` = "Arbeitgeber/-in",
-                              `5` = "Selbstständig ohne Mitarbeiter",
-                              `6` = "Rentner/-in") %>% 
-  as.factor() -> raw.short$JobType
+raw.short$Bildungsabschluss %>%  recode(`1` = "(noch) kein Schulabschluss", 
+                              `2` = "Hauptschulabschluss",
+                              `3` = "Realschulabschluss",
+                              `4` = "Abitur",
+                              `5` = "Hochschulabschluss") %>% 
+  as.factor() -> raw.short$Bildungsabschluss
 
 # Qualitätskontrolle ----
 
