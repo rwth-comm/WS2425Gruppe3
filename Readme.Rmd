@@ -13,7 +13,7 @@ Welche Faktoren beeinflussen die Akzeptanz eines KI-Chatbots zur Informationsver
 
 
 # Faktorenraum
-![Faktorenraum](readme_files/Faktorenraum)
+![Faktorenraum](readme_files/Faktorenraum.png)
 
 
 # Operationalisierung
