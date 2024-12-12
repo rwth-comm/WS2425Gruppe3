@@ -13,8 +13,7 @@ Beispiel Deutscher Großstädter
 # Faktorenraum
 
 <figure>
-<img src="readme_files/GruppeDreiszenarioNEUNEUA.jpg"
-alt="Faktorenraum" />
+<img src="readme_files/Faktorenraum" alt="Faktorenraum" />
 <figcaption aria-hidden="true">Faktorenraum</figcaption>
 </figure>
 
