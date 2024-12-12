@@ -45,3 +45,29 @@ df %>%
   theme_minimal()
 
 ggsave(filename = "boxplot.png", width = 15, height = 12, units = "cm")
+
+#Hypothesentests
+#Hypothese 1
+cor.test(df$Age, df$Vertrauen)
+
+x <- c(df$Age)
+y <- c(df$Vertrauen)
+cor.test(x, y, method = "pearson")
+
+cor.test(x, y, alternative = "two.sided", method = "pearson", 
+         exact = NULL, conf.level = 0.95, continuity = FALSE)
+
+#Hypothese 2
+cor.test(df$ATI, df$Privatsphäre)
+
+#Hypothese 3
+cor.test(df$Bedienbarkeit, df$Szenario_B)
+
+#Hypothese 4
+cor.test(df$Behörden, df$Vertrauen)
+
+#Hypothese 5
+cor.test(df$Zeitersparnis, df$Szenario_B)
+
+#Hypothese 6
+cor.test(df$Privatsphäre, df$BF_Offenheit)
