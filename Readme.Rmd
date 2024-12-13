@@ -72,7 +72,7 @@ ggplot(df) +
   theme_minimal()
 ```
 
-```{r}
+```{r, echo=FALSE}
 df %>% 
  filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
  ggplot() +

@@ -74,24 +74,7 @@ Items in Anlehnung an ChatGPT umformuliert
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
-    df %>% 
-     filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
-     ggplot() +
-     aes(x = ATI, 
-         y = Gender) +
-     geom_boxplot(fill = aachen_color("purple", "turquoise")) +
-     labs(x = "ATI", 
-          y = "Geschlecht", 
-          title = "Männer haben deskriptiv einen höheren KUT als Frauen", 
-          subtitle = "Deskriptiver Vergleich im Boxplot", 
-          caption = "Punkte zeigen Außreißer") +
-      coord_flip() +
-      scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
-     theme_minimal()
-
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
-
-    ggsave(filename = "boxplot.png", width = 15, height = 12, units = "cm")
 
 # Hypothesen
 
