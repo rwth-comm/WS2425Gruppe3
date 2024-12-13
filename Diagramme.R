@@ -67,10 +67,14 @@ library(ggplot2)
 
 ggplot(df) +
  aes(x = Vertrauen) +
- geom_density(fill = "#112446") +
- labs(x = " ", y = " ", title = " ", 
- subtitle = " ", caption = " ") +
+ geom_density(fill = aachen_color("yellow")) +
+ labs(x = " ", 
+      y = " ", 
+      title = " ", 
+      subtitle = " ", 
+      caption = " ") +
  theme_minimal()
+
 
 
 
@@ -99,3 +103,4 @@ cor.test(df$Zeitersparnis, df$Szenario_B)
 
 #Hypothese 6
 cor.test(df$Privatsphäre, df$BF_Offenheit)
+
