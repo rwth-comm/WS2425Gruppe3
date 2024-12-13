@@ -68,9 +68,9 @@ library(ggplot2)
 ggplot(df) +
  aes(x = Vertrauen) +
  geom_density(fill = aachen_color("yellow")) +
- labs(x = " ", 
-      y = " ", 
-      title = " ", 
+ labs(x = "Vertrauen", 
+      y = "Höhe des Vertrauens", 
+      title = "Vertrauen in KI", 
       subtitle = " ", 
       caption = " ") +
  theme_minimal()
