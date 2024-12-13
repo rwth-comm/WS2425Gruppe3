@@ -1,6 +1,5 @@
 # Teammitglieder
 
--   ME
 -   PH
 -   AM
 
