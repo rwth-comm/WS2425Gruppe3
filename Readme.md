@@ -16,20 +16,6 @@
 
     df <- readRDS("data/data.rds")
 
-    ggplot(df) +
-      aes(x = Age) +
-      geom_histogram(bins = 30L, fill = aachen_color("magenta")) +
-      geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
-      geom_text(x = mean(df$Age, na.rm = TRUE), y = 25, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
-      labs(x = "Alter in Jahren", 
-           y = "Anzahl", 
-           title = paste0("Altersverteilung an Fragebogen teilgenommenn n = (", nrow(df), ")"),
-           subtitle = "Histogramm der Altersverteilung", 
-           caption = "30 Bins") +
-      theme_minimal()
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
-
 # Teammitglieder
 
 -   PH
@@ -85,6 +71,20 @@ ChatGPT resultiert in reflektiver Skala
 Erwartung an Zeitaufwand/Zeiteffizienz: intervallskaliert -&gt;
 Likert-Skala (2 Items) Operationaliserung stellt Forschungslücke dar,
 Items in Anlehnung an ChatGPT umformuliert
+
+    ggplot(df) +
+      aes(x = Age) +
+      geom_histogram(bins = 30L, fill = aachen_color("magenta")) +
+      geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
+      geom_text(x = mean(df$Age, na.rm = TRUE), y = 25, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
+      labs(x = "Alter in Jahren", 
+           y = "Anzahl", 
+           title = paste0("Altersverteilung an Fragebogen teilgenommenn n = (", nrow(df), ")"),
+           subtitle = "Histogramm der Altersverteilung", 
+           caption = "30 Bins") +
+      theme_minimal()
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 # Hypothesen
 
