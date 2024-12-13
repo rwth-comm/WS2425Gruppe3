@@ -1,7 +1,7 @@
-#install.packages("tidyverse")
-#install.packages("ggthemes")
-#remotes::install_github("christianholland/AachenColorPalette")
-#install.packages("esquisse")
+install.packages("tidyverse")
+install.packages("ggthemes")
+remotes::install_github("christianholland/AachenColorPalette")
+install.packages("esquisse")
 
 library(tidyverse)
 library(ggthemes)
@@ -31,20 +31,48 @@ ggsave(filename = "histogram.png", width = 15, height = 12, units = "cm")
 library(ggplot2)
 
 df %>% 
-  filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
-  ggplot() +
-  aes(x = ATI, y = Gender) +
-  geom_boxplot(fill = aachen_color("blue75", "red75")) +
-  labs(x = "ATI [1-6]", 
-       y = "Geschlecht", 
-       title = "Männer haben deskriptiv einen höheren KUT als Frauen", 
-       subtitle = "Deskriptiver Vergleich im Boxplot", 
-       caption = "Punkte zeigen Ausreißer") +
+ filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
+ ggplot() +
+ aes(x = ATI, 
+     y = Gender) +
+ geom_boxplot(fill = aachen_color("purple", "turquoise")) +
+ labs(x = "ATI", 
+      y = "Geschlecht", 
+      title = "Männer haben deskriptiv einen höheren KUT als Frauen", 
+      subtitle = "Deskriptiver Vergleich im Boxplot", 
+      caption = "Punkte zeigen Außreißer") +
   coord_flip() +
   scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
-  theme_minimal()
+ theme_minimal()
+
 
 ggsave(filename = "boxplot.png", width = 15, height = 12, units = "cm")
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Bildungsabschluss, y = big5_1) +
+ geom_violin(fill = aachen_color("orange")) +
+ labs(x = "Bildungsabschluss", 
+      y = "BIG5", 
+      title = "Abschluss und Persönlichkeit", 
+      subtitle = "Vergleich", 
+      caption = " ") +
+  coord_flip() +
+ theme_minimal()
+
+
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Vertrauen) +
+ geom_density(fill = "#112446") +
+ labs(x = " ", y = " ", title = " ", 
+ subtitle = " ", caption = " ") +
+ theme_minimal()
+
+
 
 #Hypothesentests
 #Hypothese 1
