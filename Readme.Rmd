@@ -58,7 +58,7 @@ Operationaliserung stellt Forschungslücke dar, Itemformulierung mit ChatGPT res
 Erwartung an Zeitaufwand/Zeiteffizienz: intervallskaliert -> Likert-Skala (2 Items) 
 Operationaliserung stellt Forschungslücke dar, Items in Anlehnung an ChatGPT umformuliert
 
-```{r}
+```{r, echo = FALSE}
 ggplot(df) +
   aes(x = Age) +
   geom_histogram(bins = 30L, fill = aachen_color("magenta")) +
