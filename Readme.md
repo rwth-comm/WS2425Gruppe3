@@ -30,7 +30,7 @@ Beispiel Deutscher Großstädter
 # Faktorenraum
 
 <figure>
-<img src="readme_files/Faktorenraum.png" alt="Faktorenraum" />
+<img src="Readme_files/Faktorenraum.png" alt="Faktorenraum" />
 <figcaption aria-hidden="true">Faktorenraum</figcaption>
 </figure>
 
