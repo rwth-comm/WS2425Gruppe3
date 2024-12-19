@@ -59,13 +59,13 @@ raw.short$Wohnort %>%
 schluesselliste <- list(
   BF_Offenheit = c("big5_1", "big5_2n"),
   ATI = vars4psych(raw.short, "ati"),
-  Behörden = c("behoerden_1", "behoerden_2", "behoerden_3", "behoerden_4", "behoerden_5", "behoerden_6n"),
+  Behoerden = c("behoerden_1", "behoerden_2", "behoerden_3", "behoerden_4", "behoerden_5", "behoerden_6n"),
   Szenario_B_BI = c("sz_B_1", "sz_B_2", "sz_B_3"),
-  Szenario_B_ATT = C("sz_B_4", "sz_B_5", "sz_B_6"),
+  Szenario_B_ATT = c("sz_B_4", "sz_B_5", "sz_B_6"),
   Privatsphäre = c("privat_B_1n", "privat_B_2n", "privat_B_3n"),
   Vertrauen = c("vertrauen_B_1", "vertrauen_B_2"),
   Bedienbarkeit = c("bedienenb_B_1", "bedienenb_B_2", "bedienenb_B_3", "bedienenb_B_4", "bedienenb_B_5"),
-  Zeitersparnis = c("zeit_B_1", "zeit_B_2"),
+  Zeitersparnis = c("zeit_B_1", "zeit_B_2")
 )
 
 
