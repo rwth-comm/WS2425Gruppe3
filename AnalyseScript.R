@@ -7,7 +7,9 @@ library(psych)
 source("qualtricshelpers.R")
 
 # Daten einlesen ----
-raw <- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
+raw2<- load_qualtrics_csv("data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv")
+raw<- load_qualtrics_csv("data/Testdaten_echter_Fragebogen.csv")
+
 
 # Rohdaten filtern ----
 raw %>% 
@@ -15,11 +17,12 @@ raw %>%
   filter(Status == 2) -> raw
 
 # Überflüssige Variablen entfernen ----
-raw.short <- raw[,c(-1,-2,-4,-8:-18,-23,-26:-28,-38:-49,-56:-77,-98:-111)]
+raw.short <- raw[,c(-1,-2,-4,-8,-10:-18,-23,-26:-28,-38:-49,-56:-62,-64:-75, -94:-106)]
+
 
 # Variablen umbenennen ----
 
-generate_codebook(raw.short, "data/Methodenseminar+WS2425_6.+Dezember+2024_13.12.csv", "data/codebook.csv")
+generate_codebook(raw.short, "data/Testdaten_echter_Fragebogen.csv", "data/codebook.csv")
 codebook <- read_codebook("data/codebook_final.csv")
 names(raw.short) <- codebook$variable
 
@@ -58,7 +61,7 @@ schluesselliste <- list(
   ATI = vars4psych(raw.short, "ati"),
   Behörden = c("behörden_1", "behörden_2", "behörden_3", "behörden_4", "behörden_5", "behörden_6n"),
   Szenario_B = c("sz_B_1", "sz_B_2", "sz_B_3", "sz_B_4", "sz_B_5", "sz_B_6"),
-  Privatsphäre = c("privat_B_1n", "privat_B_2n", "privat_B_3n", "privat_B_4", "privat_B_5"),
+  Privatsphäre = c("privat_B_1n", "privat_B_2n", "privat_B_3n"),
   Vertrauen = c("vertrauen_B_1", "vertrauen_B_2"),
   Bedienbarkeit = c("bedienenb_B_1", "bedienenb_B_2", "bedienenb_B_3", "bedienenb_B_4", "bedienenb_B_5"),
   Zeitersparnis = c("zeit_B_1", "zeit_B_2"),
