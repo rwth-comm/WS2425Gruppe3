@@ -129,30 +129,31 @@ Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei 0.26770
 
 #Hypothesentests ----
 #Zusammenhangshypothese 1 ----
-```{r, echo=FALSE}
 
-```
+
+```{r, echo=FALSE}
 cor.test(df$Age, df$Vertrauen, method = "pearson")
+```
 #Zusammenhangshypothese 2 ----
 
-```{r, echo=FALSE}
+```{r}
 cor.test(df$Behörden, df$Vertrauen, method = "pearson")
 ```
 
 #Zusammenhangshypothese 3 ----
-```{r, echo=FALSE}
-cor.test(df$Zeitersparnis, df$Szenario_B, method = "pearson")
+```{r}
+cor.test(df$Zeitersparnis, df$Szenario_B_BI, method = "pearson")
 ```
 
 
 #Zusammenhangsypothese 4 ----
-```{r, echo=FALSE}
+```{r}
 cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 ```
 
 
 #komplexe Unterschiedshypothese ----
-```{r, echo=FALSE}
+```{r}
 anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
 ```
 

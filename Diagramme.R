@@ -1,6 +1,6 @@
 install.packages("tidyverse")
 install.packages("ggthemes")
-remotes::install_github("christianholland/AachenColorPalette")
+remotes::install_github("christianholland/AachenColorPalette", force = TRUE)
 install.packages("esquisse")
 
 library(tidyverse)
@@ -89,16 +89,61 @@ cor.test(x, y, method = "pearson")
 cor.test(x, y, alternative = "two.sided", method = "pearson", 
          exact = NULL, conf.level = 0.95, continuity = FALSE)
 
+#Diagramm zu Hypothese 1 ----
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Age, y = Vertrauen) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", y = " ", title = " ", 
+ subtitle = " ", caption = " ") +
+ theme_minimal()
 
 
 #Zusammenhangshypothese 2 ----
 cor.test(df$Behörden, df$Vertrauen, method = "pearson")
 
+#Diagramm zu Hypothese 2 ----
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Behoerden, y = Vertrauen) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", y = " ", 
+ title = " ", subtitle = " ", caption = " ") +
+ theme_minimal()
+
+
 #Zusammenhangshypothese 3 ----
 cor.test(df$Zeitersparnis, df$Szenario_B, method = "pearson")
 
+#Diagramm zu Hypothese 3 ---
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Zeitersparnis, y = Szenario_B_BI) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", 
+ y = " ", title = " ", subtitle = " ", caption = " ") +
+ theme_minimal()
+
+
 #Zusammenhangsypothese 4 ----
 cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
+
+#Diagramm zu Hypothese 4 ----
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Privatsphäre, y = BF_Offenheit) +
+ geom_point(colour = "#112446") +
+ labs(x = " ", 
+ y = " ", title = " ", subtitle = " ", caption = " ") +
+ theme_minimal()
+
 
 #komplexe Unterschiedshypothese ----
 anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
