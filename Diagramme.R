@@ -78,9 +78,9 @@ ggplot(df) +
 
 
 
-#Hypothesentests
-#Zusammenhangshypothese 1
-cor.test(df$Age, df$Vertrauen)
+#Hypothesentests ----
+#Zusammenhangshypothese 1 ----
+cor.test(df$Age, df$Vertrauen, method = "pearson")
 
 x <- c(df$Age)
 y <- c(df$Vertrauen)
@@ -91,12 +91,15 @@ cor.test(x, y, alternative = "two.sided", method = "pearson",
 
 
 
-#Zusammenhangshypothese 2
-cor.test(df$Behörden, df$Vertrauen)
+#Zusammenhangshypothese 2 ----
+cor.test(df$Behörden, df$Vertrauen, method = "pearson")
 
-#Zusammenhangshypothese 3
-cor.test(df$Zeitersparnis, df$Szenario_B)
+#Zusammenhangshypothese 3 ----
+cor.test(df$Zeitersparnis, df$Szenario_B, method = "pearson")
 
-#Zusammenhangsypothese 4
-cor.test(df$Privatsphäre, df$BF_Offenheit)
+#Zusammenhangsypothese 4 ----
+cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
+
+#komplexe Unterschiedshypothese ----
+anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
 

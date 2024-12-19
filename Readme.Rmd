@@ -126,3 +126,34 @@ Komplexe Unterschiedshypothese
 
 Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei 0.2677066 liegen, um bei einem Signifikanzniveau von 0,05 detektiert zu werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
+
+#Hypothesentests ----
+#Zusammenhangshypothese 1 ----
+```{r, echo=FALSE}
+
+```
+cor.test(df$Age, df$Vertrauen, method = "pearson")
+#Zusammenhangshypothese 2 ----
+
+```{r, echo=FALSE}
+cor.test(df$Behörden, df$Vertrauen, method = "pearson")
+```
+
+#Zusammenhangshypothese 3 ----
+```{r, echo=FALSE}
+cor.test(df$Zeitersparnis, df$Szenario_B, method = "pearson")
+```
+
+
+#Zusammenhangsypothese 4 ----
+```{r, echo=FALSE}
+cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
+```
+
+
+#komplexe Unterschiedshypothese ----
+```{r, echo=FALSE}
+anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+```
+
+
