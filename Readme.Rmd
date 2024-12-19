@@ -118,10 +118,10 @@ Einfache Zusammenhangshypothesen
 
 Komplexe Zusammenhangshypothese
 
-1. Je höher der Bildungsgrad und die Technikaffinität einer Person, desto bewusster ist die Nutzungsintention eines KI-Chatbots.
+1. Je besser die Einstellung gegenüber der Kommunalverwaltung und je höher die Technikaffinität einer Person, desto bewusster ist die Nutzungsintention eines KI-Chatbots.
 -> Multiple lineare Regression
 
-2. Die Nutzungsintention eines KI-Chatbots ist abhängig vom Geschlecht und der Technikaffinität einer Person.
+2. Die Nutzungsintention eines KI-Chatbots ist abhängig von der Benutzerfreundlichkeit des Chatbots und der Technikaffinität einer Person.
 -> Multiple lineare Regression 
 
 Komplexe Unterschiedshypothese
