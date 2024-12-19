@@ -100,20 +100,13 @@ Einfache Zusammenhangshypothesen
 1. Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
 -> Pearson-Korrelation 
 
-2. Es gibt einen Zusammenhang zwischen der Technikaffinität und der Privatsphärewahrnehmung
+2. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 -> Pearson-Korrelation
 
-3. Es gibt einen Zusammenhang zwischen der wahrgenommenen Benutzerfreundlichkeit und Nutzungsintention
+3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
 -> Pearson-Korrelation 
 
-4. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
--> Pearson-Korrelation
-
-5. Es gibt einen zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
--> Pearson-Korrelation 
-
-
-6. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
+4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
 -> Pearson-Korrelation 
 
 Komplexe Zusammenhangshypothese

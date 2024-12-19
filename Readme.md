@@ -1,5 +1,25 @@
     library(tidyverse)
 
+    ## Warning: Paket 'tidyverse' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'ggplot2' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'tibble' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'tidyr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'readr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'purrr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'dplyr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'stringr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'forcats' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'lubridate' wurde unter R Version 4.4.2 erstellt
+
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -12,6 +32,9 @@
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
     library(ggthemes)
+
+    ## Warning: Paket 'ggthemes' wurde unter R Version 4.4.2 erstellt
+
     library(AachenColorPalette)
 
     df <- readRDS("data/data.rds")
@@ -83,32 +106,26 @@ Einfache Zusammenhangshypothesen
 1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
     den KI-Chatbot. -&gt; Pearson-Korrelation
 
-2.  Es gibt einen Zusammenhang zwischen der Technikaffinität und der
-    Privatsphärewahrnehmung -&gt; Pearson-Korrelation
-
-3.  Es gibt einen Zusammenhang zwischen der wahrgenommenen
-    Benutzerfreundlichkeit und Nutzungsintention -&gt;
-    Pearson-Korrelation
-
-4.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
+2.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
     gegenüber der Kommunalverwaltung und dem Vertrauen in den
     KI-Chatbot. -&gt; Pearson-Korrelation
 
-5.  Es gibt einen zusammenhang zwischen der Nutzungsintention und dem
+3.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
     Zeitaufwand. -&gt; Pearson-Korrelation
 
-6.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
+4.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
     der Offenheit einer Person. -&gt; Pearson-Korrelation
 
 Komplexe Zusammenhangshypothese
 
-1.  Je höher der Bildungsgrad und die Technikaffinität einer Person,
-    desto bewusster ist die Nutzungsintention eines KI-Chatbots. -&gt;
-    Multiple lineare Regression
-
-2.  Die Nutzungsintention eines KI-Chatbots ist abhängig vom Geschlecht
-    und der Technikaffinität einer Person. -&gt; Multiple lineare
+1.  Je besser die Einstellung gegenüber der Kommunalverwaltung und je
+    höher die Technikaffinität einer Person, desto bewusster ist die
+    Nutzungsintention eines KI-Chatbots. -&gt; Multiple lineare
     Regression
+
+2.  Die Nutzungsintention eines KI-Chatbots ist abhängig von der
+    Benutzerfreundlichkeit des Chatbots und der Technikaffinität einer
+    Person. -&gt; Multiple lineare Regression
 
 Komplexe Unterschiedshypothese
 
