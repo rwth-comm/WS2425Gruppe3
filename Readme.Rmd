@@ -9,6 +9,7 @@ date: "2024-11-02"
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
+library(jmv)
 
 df <- readRDS("data/data.rds")
 ```
@@ -137,7 +138,7 @@ cor.test(df$Age, df$Vertrauen, method = "pearson")
 #Zusammenhangshypothese 2 ----
 
 ```{r}
-cor.test(df$Behörden, df$Vertrauen, method = "pearson")
+cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
 ```
 
 #Zusammenhangshypothese 3 ----
@@ -154,7 +155,7 @@ cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 
 #komplexe Unterschiedshypothese ----
 ```{r}
-anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
 ```
 
 

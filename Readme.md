@@ -1,25 +1,5 @@
     library(tidyverse)
 
-    ## Warning: Paket 'tidyverse' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'ggplot2' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'tibble' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'tidyr' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'readr' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'purrr' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'dplyr' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'stringr' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'forcats' wurde unter R Version 4.4.2 erstellt
-
-    ## Warning: Paket 'lubridate' wurde unter R Version 4.4.2 erstellt
-
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -32,10 +12,8 @@
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
     library(ggthemes)
-
-    ## Warning: Paket 'ggthemes' wurde unter R Version 4.4.2 erstellt
-
     library(AachenColorPalette)
+    library(jmv)
 
     df <- readRDS("data/data.rds")
 
@@ -138,3 +116,82 @@ Komplexe Unterschiedshypothese
 Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei
 0.2677066 liegen, um bei einem Signifikanzniveau von 0,05 detektiert zu
 werden. Somit ist das ein schwacher bis mittelstarker Effekt
+
+\#Hypothesentests —- \#Zusammenhangshypothese 1 —-
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$Age and df$Vertrauen
+    ## t = 1.495, df = 698, p-value = 0.1354
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.01768193  0.13005332
+    ## sample estimates:
+    ##        cor 
+    ## 0.05649494
+
+\#Zusammenhangshypothese 2 —-
+
+    cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$Behoerden and df$Vertrauen
+    ## t = 1.7774, df = 698, p-value = 0.07594
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.007015373  0.140526234
+    ## sample estimates:
+    ##        cor 
+    ## 0.06712236
+
+\#Zusammenhangshypothese 3 —-
+
+    cor.test(df$Zeitersparnis, df$Szenario_B_BI, method = "pearson")
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$Zeitersparnis and df$Szenario_B_BI
+    ## t = 1.0743, df = 698, p-value = 0.2831
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.03357469  0.11438769
+    ## sample estimates:
+    ##        cor 
+    ## 0.04062924
+
+\#Zusammenhangsypothese 4 —-
+
+    cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
+
+    ## 
+    ##  Pearson's product-moment correlation
+    ## 
+    ## data:  df$Privatsphäre and df$BF_Offenheit
+    ## t = -0.24648, df = 698, p-value = 0.8054
+    ## alternative hypothesis: true correlation is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.08337407  0.06481879
+    ## sample estimates:
+    ##          cor 
+    ## -0.009328859
+
+\#komplexe Unterschiedshypothese —-
+
+    ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+
+    ## 
+    ##  ANOVA
+    ## 
+    ##  ANOVA - Szenario_B_BI                                                                            
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##                                 Sum of Squares    df     Mean Square    F             p           
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##    Bildungsabschluss                 3.8994764      4     0.97486909    1.02237890    0.3948496   
+    ##    Wohnort                           0.1565208      2     0.07826041    0.08207439    0.9212125   
+    ##    Bildungsabschluss:Wohnort         4.7345840      8     0.59182300    0.62066523    0.7608799   
+    ##    Residuals                       653.1681385    685     0.95353013                              
+    ##  ────────────────────────────────────────────────────────────────────────────────────────────────
