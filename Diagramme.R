@@ -94,9 +94,15 @@ library(ggplot2)
 
 ggplot(df) +
  aes(x = Age, y = Vertrauen) +
- geom_point(colour = "#112446") +
- labs(x = " ", y = " ", title = " ", 
- subtitle = " ", caption = " ") +
+ geom_point(colour = aachen_color("orange")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(1,6), breaks = c(1:6))+
+  scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
+ labs(x = "Alter in Jahren", 
+      y = "Vertrauen in KI-Chatbot", 
+      title = "Zusammenhang zwischen Alter und Vertrauen in KI-Chatbot", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
  theme_minimal()
 
 
@@ -109,9 +115,15 @@ library(ggplot2)
 
 ggplot(df) +
  aes(x = Behoerden, y = Vertrauen) +
- geom_point(colour = "#112446") +
- labs(x = " ", y = " ", 
- title = " ", subtitle = " ", caption = " ") +
+ geom_jitter(shape = 21, colour = aachen_color("magenta"), fill = aachen_color("yellow")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  labs(x = "Einstellung gegenüber Kommunalverwaltung", 
+      y = "Vertrauen in KI-Chatbot", 
+      title = "Zusammenhang zwischen Eintsellun ggü. Kommunalververwaltung und Vertrauen in KI-Chatbot", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
  theme_minimal()
 
 
@@ -124,9 +136,15 @@ library(ggplot2)
 
 ggplot(df) +
  aes(x = Zeitersparnis, y = Szenario_B_BI) +
- geom_point(colour = "#112446") +
- labs(x = " ", 
- y = " ", title = " ", subtitle = " ", caption = " ") +
+ geom_jitter(shape = 21, colour = aachen_color("blue"), fill = aachen_color("orange50")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+ labs(x = "Zeitaufwand", 
+      y = "Nutzungsintention", 
+      title = "Zusammenhang zwischen Zeitaufwand und Nutzungsintention des KI-Chatbots", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
  theme_minimal()
 
 
@@ -139,9 +157,15 @@ library(ggplot2)
 
 ggplot(df) +
  aes(x = Privatsphäre, y = BF_Offenheit) +
- geom_point(colour = "#112446") +
- labs(x = " ", 
- y = " ", title = " ", subtitle = " ", caption = " ") +
+ geom_jitter(shape = 21, colour = aachen_color("bordeaux"), fill = aachen_color("maygreen50")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+ labs(x = "Privatsphärewahrnehmung", 
+      y = "Offenheit einer Person", 
+      title = "Zusammenhang zwischen Privatsphärewahrnehmung und Offenheit einer Person", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
  theme_minimal()
 
 
