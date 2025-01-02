@@ -96,8 +96,6 @@ ggplot(df) +
  aes(x = Age, y = Vertrauen) +
  geom_point(colour = aachen_color("orange")) +
   geom_smooth(method = "lm") +
-  scale_y_continuous(limits = c(1,6), breaks = c(1:6))+
-  scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
  labs(x = "Alter in Jahren", 
       y = "Vertrauen in KI-Chatbot", 
       title = "Zusammenhang zwischen Alter und Vertrauen in KI-Chatbot", 
