@@ -3,6 +3,7 @@ install.packages("ggthemes")
 remotes::install_github("christianholland/AachenColorPalette", force = TRUE)
 install.packages("esquisse")
 
+
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
@@ -104,6 +105,7 @@ ggplot(df) +
  theme_minimal()
 
 
+
 #Zusammenhangshypothese 2 ----
 cor.test(df$Behörden, df$Vertrauen, method = "pearson")
 
@@ -124,26 +126,26 @@ ggplot(df) +
       caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
  theme_minimal()
 
-
 #Zusammenhangshypothese 3 ----
 cor.test(df$Zeitersparnis, df$Szenario_B, method = "pearson")
 
 #Diagramm zu Hypothese 3 ---
 
+
 library(ggplot2)
 
 ggplot(df) +
- aes(x = Zeitersparnis, y = Szenario_B_BI) +
+ aes(x = Szenario_B_BI, y = Zeitersparnis) +
  geom_jitter(shape = 21, colour = aachen_color("blue"), fill = aachen_color("orange50")) +
   geom_smooth(method = "lm") +
   scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
   scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
- labs(x = "Zeitaufwand", 
-      y = "Nutzungsintention", 
-      title = "Zusammenhang zwischen Zeitaufwand und Nutzungsintention des KI-Chatbots", 
-      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
-      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
- theme_minimal()
+ labs(x = "Nutzungsintention", 
+       y = "Zeitaufwand", 
+       title = "Zusammenhang zwischen Zeitaufwand und Nutzungsintention des KI-Chatbots", 
+       subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+       caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
+theme_minimal()
 
 
 #Zusammenhangsypothese 4 ----
@@ -169,4 +171,19 @@ ggplot(df) +
 
 #komplexe Unterschiedshypothese ----
 anova(data, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+
+
+library(ggplot2)
+
+ggplot(df) +
+ aes(x = Szenario_B_BI, y = Bildungsabschluss, fill = Wohnort) +
+ geom_boxplot() +
+ scale_fill_hue(direction = 1) +
+ labs(x = "Nutzungsintention", y = "Schulabschluss", 
+      title = "Einfluss von Schulabschluss und Wohnort auf die Nutzungsintention", 
+      subtitle = "Deskriptiver Vergleich im Boxplot", 
+      caption = "Punkte zeigen Außreißer") +
+  scale_x_continuous(limits = c(1,5), breaks = c(1:5)) +
+ theme_minimal()
+
 

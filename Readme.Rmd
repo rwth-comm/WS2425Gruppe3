@@ -107,7 +107,7 @@ Einfache Zusammenhangshypothesen
 3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
 -> Pearson-Korrelation 
 
-4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
+4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person.
 -> Pearson-Korrelation 
 
 Komplexe Zusammenhangshypothese
@@ -135,6 +135,7 @@ Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei 0.26770
 ```{r, echo=FALSE}
 cor.test(df$Age, df$Vertrauen, method = "pearson")
 ```
+
 #Zusammenhangshypothese 2 ----
 
 ```{r}
@@ -157,5 +158,101 @@ cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 ```{r}
 ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
 ```
+
+#Diagrame zu den Hypothesen
+
+Einfache Zusammenhangshypothesen
+
+1. Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
+
+```{r, echo=FALSE}
+ggplot(df) +
+ aes(x = Age, y = Vertrauen) +
+ geom_point(colour = aachen_color("orange")) +
+  geom_smooth(method = "lm") +
+ labs(x = "Alter in Jahren", 
+      y = "Vertrauen in KI-Chatbot", 
+      title = "Zusammenhang zwischen Alter und Vertrauen in KI-Chatbot", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
+ theme_minimal()
+```
+
+
+2. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
+
+```{r, echo=FALSE}
+ggplot(df) +
+ aes(x = Behoerden, y = Vertrauen) +
+ geom_jitter(shape = 21, colour = aachen_color("magenta"), fill = aachen_color("yellow")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  labs(x = "Einstellung gegenüber Kommunalverwaltung", 
+      y = "Vertrauen in KI-Chatbot", 
+      title = "Zusammenhang zwischen Eintsellun ggü. Kommunalververwaltung und Vertrauen in KI-Chatbot", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
+ theme_minimal()
+```
+
+
+3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
+
+```{r, echo=FALSE}
+ggplot(df) +
+ aes(x = Szenario_B_BI, y = Zeitersparnis) +
+ geom_jitter(shape = 21, colour = aachen_color("blue"), fill = aachen_color("orange50")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+ labs(x = "Nutzungsintention", 
+       y = "Zeitaufwand", 
+       title = "Zusammenhang zwischen Zeitaufwand und Nutzungsintention des KI-Chatbots", 
+       subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+       caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
+theme_minimal()
+
+```
+
+
+4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
+
+```{r, echo=FALSE}
+ggplot(df) +
+ aes(x = Privatsphäre, y = BF_Offenheit) +
+ geom_jitter(shape = 21, colour = aachen_color("bordeaux"), fill = aachen_color("maygreen50")) +
+  geom_smooth(method = "lm") +
+  scale_y_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+  scale_x_continuous(limits = c(0.75,6.25), breaks = c(1:6)) +
+ labs(x = "Privatsphärewahrnehmung", 
+      y = "Offenheit einer Person", 
+      title = "Zusammenhang zwischen Privatsphärewahrnehmung und Offenheit einer Person", 
+      subtitle = "Punktdiagramm mit linearer Regressionsgraden", 
+      caption = "Schattierung zeigt 95%-Konfidenzbereich der Regressionsgrade") +
+ theme_minimal()
+```
+
+
+Komplexe Unterschiedshypothese
+
+1. Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss, hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend) haben einen Einfluss auf die Nutzungsintention.
+
+```{r, echo=FALSE}
+ggplot(df) +
+ aes(x = Szenario_B_BI, y = Bildungsabschluss, fill = Wohnort) +
+ geom_boxplot() +
+ scale_fill_hue(direction = 1) +
+ labs(x = "Nutzungsintention", y = "Schulabschluss", 
+      title = "Einfluss von Schulabschluss und Wohnort auf die Nutzungsintention", 
+      subtitle = "Deskriptiver Vergleich im Boxplot", 
+      caption = "Punkte zeigen Außreißer") +
+  scale_x_continuous(limits = c(1,5), breaks = c(1:5)) +
+ theme_minimal()
+```
+
+
+
+
 
 

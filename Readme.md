@@ -195,3 +195,57 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##    Bildungsabschluss:Wohnort         4.7345840      8     0.59182300    0.62066523    0.7608799   
     ##    Residuals                       653.1681385    685     0.95353013                              
     ##  ────────────────────────────────────────────────────────────────────────────────────────────────
+
+\#Diagrame zu den Hypothesen
+
+Einfache Zusammenhangshypothesen
+
+1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
+    den KI-Chatbot.
+
+<!-- -->
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+
+1.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
+    gegenüber der Kommunalverwaltung und dem Vertrauen in den
+    KI-Chatbot.
+
+<!-- -->
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
+1.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
+    Zeitaufwand.
+
+<!-- -->
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+
+1.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
+    der Offenheit einer Person.
+
+<!-- -->
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+Komplexe Unterschiedshypothese
+
+1.  Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
+    hoher Schulabschluss) und Wohnort (ländlichen oder städtischen
+    Gegend) haben einen Einfluss auf die Nutzungsintention.
+
+<!-- -->
+
+    ## Warning: Removed 30 rows containing non-finite outside the scale range
+    ## (`stat_boxplot()`).
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
