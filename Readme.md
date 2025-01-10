@@ -276,9 +276,4 @@ Komplexe Unterschiedshypothese
     hoher Schulabschluss) und Wohnort (ländlichen oder städtischen
     Gegend) haben einen Einfluss auf die Nutzungsintention.
 
-<!-- -->
-
-    ## Warning: Removed 29 rows containing non-finite outside the scale range
-    ## (`stat_boxplot()`).
-
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)

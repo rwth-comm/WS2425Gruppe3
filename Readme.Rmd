@@ -251,14 +251,14 @@ Komplexe Unterschiedshypothese
 
 ```{r, echo=FALSE}
 ggplot(df) +
- aes(x = Szenario_B_BI, y = Bildungsabschluss, fill = Wohnort) +
+ aes(x = Szenario_B_BI, y = Bildungsabschluss4Anova, fill = Wohnort4Anova) +
  geom_boxplot() +
  scale_fill_hue(direction = 1) +
  labs(x = "Nutzungsintention", y = "Schulabschluss", 
       title = "Einfluss von Schulabschluss und Wohnort auf die Nutzungsintention", 
       subtitle = "Deskriptiver Vergleich im Boxplot", 
       caption = "Punkte zeigen Außreißer") +
-  scale_x_continuous(limits = c(1,5), breaks = c(1:5)) +
+  scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
  theme_minimal()
 ```
 
