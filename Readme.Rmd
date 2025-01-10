@@ -156,7 +156,18 @@ cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 
 #komplexe Unterschiedshypothese ----
 ```{r}
-ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+table(df$Wohnort)
+table(df$Bildungsabschluss)
+
+df$Wohnort %>% 
+  recode(`Ländlich` = "Nicht Großstadt", `Vorort/Kleinstadt` = "Nicht Großstadt", `Großstadt` = "Großstadt") %>% 
+  as.factor() -> df$Wohnort4Anova
+
+df$Bildungsabschluss %>% 
+  recode(`(noch) kein Schulabschluss` = "kein Hochschulabschluss", `Hauptschulabschluss` = "kein Hochschulabschluss", `Realschulabschluss` = "kein Hochschulabschluss", `Abitur` = "kein Hochschulabschluss", `Hochschulabschluss`= "Hochschulabschluss") %>% 
+  as.factor() -> df$Bildungsabschluss4Anova
+
+ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss4Anova", "Wohnort4Anova"))
 ```
 
 #Diagrame zu den Hypothesen

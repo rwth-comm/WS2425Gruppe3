@@ -73,6 +73,9 @@ Erwartung an Zeitaufwand/Zeiteffizienz: intervallskaliert -&gt;
 Likert-Skala (2 Items) Operationaliserung stellt Forschungslücke dar,
 Items in Anlehnung an ChatGPT umformuliert
 
+    ## Warning: Removed 5 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
@@ -123,13 +126,13 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$Age and df$Vertrauen
-    ## t = 1.495, df = 698, p-value = 0.1354
+    ## t = -3.6097, df = 237, p-value = 0.000374
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.01768193  0.13005332
+    ##  -0.3451796 -0.1044134
     ## sample estimates:
     ##        cor 
-    ## 0.05649494
+    ## -0.2282838
 
 \#Zusammenhangshypothese 2 —-
 
@@ -139,13 +142,13 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$Behoerden and df$Vertrauen
-    ## t = 1.7774, df = 698, p-value = 0.07594
+    ## t = 1.179, df = 242, p-value = 0.2395
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.007015373  0.140526234
+    ##  -0.05049002  0.19926953
     ## sample estimates:
     ##        cor 
-    ## 0.06712236
+    ## 0.07557501
 
 \#Zusammenhangshypothese 3 —-
 
@@ -155,13 +158,13 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$Zeitersparnis and df$Szenario_B_BI
-    ## t = 1.0743, df = 698, p-value = 0.2831
+    ## t = 10.523, df = 242, p-value < 2.2e-16
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.03357469  0.11438769
+    ##  0.4676251 0.6408007
     ## sample estimates:
-    ##        cor 
-    ## 0.04062924
+    ##       cor 
+    ## 0.5603058
 
 \#Zusammenhangsypothese 4 —-
 
@@ -171,30 +174,54 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##  Pearson's product-moment correlation
     ## 
     ## data:  df$Privatsphäre and df$BF_Offenheit
-    ## t = -0.24648, df = 698, p-value = 0.8054
+    ## t = 0.29904, df = 242, p-value = 0.7652
     ## alternative hypothesis: true correlation is not equal to 0
     ## 95 percent confidence interval:
-    ##  -0.08337407  0.06481879
+    ##  -0.1066239  0.1444564
     ## sample estimates:
-    ##          cor 
-    ## -0.009328859
+    ##        cor 
+    ## 0.01921928
 
 \#komplexe Unterschiedshypothese —-
 
-    ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss", "Wohnort"))
+    table(df$Wohnort)
+
+    ## 
+    ##          Ländlich Vorort/Kleinstadt         Großstadt 
+    ##                37                83               118
+
+    table(df$Bildungsabschluss)
+
+    ## 
+    ## (noch) kein Schulabschluss        Hauptschulabschluss 
+    ##                          2                         13 
+    ##         Realschulabschluss                     Abitur 
+    ##                         32                         76 
+    ##         Hochschulabschluss 
+    ##                        115
+
+    df$Wohnort %>% 
+      recode(`Ländlich` = "Nicht Großstadt", `Vorort/Kleinstadt` = "Nicht Großstadt", `Großstadt` = "Großstadt") %>% 
+      as.factor() -> df$Wohnort4Anova
+
+    df$Bildungsabschluss %>% 
+      recode(`(noch) kein Schulabschluss` = "kein Hochschulabschluss", `Hauptschulabschluss` = "kein Hochschulabschluss", `Realschulabschluss` = "kein Hochschulabschluss", `Abitur` = "kein Hochschulabschluss", `Hochschulabschluss`= "Hochschulabschluss") %>% 
+      as.factor() -> df$Bildungsabschluss4Anova
+
+    ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss4Anova", "Wohnort4Anova"))
 
     ## 
     ##  ANOVA
     ## 
-    ##  ANOVA - Szenario_B_BI                                                                            
-    ##  ──────────────────────────────────────────────────────────────────────────────────────────────── 
-    ##                                 Sum of Squares    df     Mean Square    F             p           
-    ##  ──────────────────────────────────────────────────────────────────────────────────────────────── 
-    ##    Bildungsabschluss                 3.8994764      4     0.97486909    1.02237890    0.3948496   
-    ##    Wohnort                           0.1565208      2     0.07826041    0.08207439    0.9212125   
-    ##    Bildungsabschluss:Wohnort         4.7345840      8     0.59182300    0.62066523    0.7608799   
-    ##    Residuals                       653.1681385    685     0.95353013                              
-    ##  ────────────────────────────────────────────────────────────────────────────────────────────────
+    ##  ANOVA - Szenario_B_BI                                                                                        
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##                                             Sum of Squares    df     Mean Square    F             p           
+    ##  ──────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+    ##    Bildungsabschluss4Anova                      16.7003939      1     16.7003939    14.6553018    0.0001659   
+    ##    Wohnort4Anova                                 0.7205473      1      0.7205473     0.6323107    0.4273183   
+    ##    Bildungsabschluss4Anova:Wohnort4Anova         5.0758211      1      5.0758211     4.4542476    0.0358807   
+    ##    Residuals                                   265.5142711    233      1.1395462                              
+    ##  ────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 \#Diagrame zu den Hypothesen
 
@@ -206,6 +233,12 @@ Einfache Zusammenhangshypothesen
 <!-- -->
 
     ## `geom_smooth()` using formula = 'y ~ x'
+
+    ## Warning: Removed 5 rows containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 5 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
@@ -245,7 +278,7 @@ Komplexe Unterschiedshypothese
 
 <!-- -->
 
-    ## Warning: Removed 30 rows containing non-finite outside the scale range
+    ## Warning: Removed 29 rows containing non-finite outside the scale range
     ## (`stat_boxplot()`).
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
