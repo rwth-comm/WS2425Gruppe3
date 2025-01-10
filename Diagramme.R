@@ -7,6 +7,7 @@ install.packages("esquisse")
 library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
+libary()
 
 df <- readRDS("data/data.rds")
 
@@ -84,6 +85,7 @@ ggplot(df) +
 cor.test(df$Age, df$Vertrauen, method = "pearson")
 
 x <- c(df$Age)
+
 y <- c(df$Vertrauen)
 cor.test(x, y, method = "pearson")
 
@@ -107,7 +109,7 @@ ggplot(df) +
 
 
 #Zusammenhangshypothese 2 ----
-cor.test(df$Behörden, df$Vertrauen, method = "pearson")
+cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
 
 #Diagramm zu Hypothese 2 ----
 
