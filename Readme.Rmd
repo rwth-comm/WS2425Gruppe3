@@ -95,6 +95,15 @@ Komplexe Unterschiedshypothese
 Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei 0.2677066 liegen, um bei einem Signifikanzniveau von 0,05 detektiert zu werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 
+#Tabelle - Deskriptive Werte
+
+```{r descriptive, echo=FALSE}
+descriptives <- psych::describe(df)[c(49:57),c(3,4,8,9)]
+descriptives$alpha <- c(0.4652147, 0.8923757, 0.7878048, 0.9384264, 0.9391729, 0.8996117, 0.8358143, 0.7820799, 0.8404618)
+descriptives[,c(5,1:4)]
+```
+
+
 #Hypothesentests ----
 #Zusammenhangshypothese 1 ----
 

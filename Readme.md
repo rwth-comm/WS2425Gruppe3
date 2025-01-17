@@ -114,6 +114,19 @@ Bei einer Erhbung von 220 Probanden muss die Effektstärke mindesten bei
 0.2677066 liegen, um bei einem Signifikanzniveau von 0,05 detektiert zu
 werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
+\#Tabelle - Deskriptive Werte
+
+    ##                alpha mean   sd  min  max
+    ## BF_Offenheit    0.47 4.17 1.09 1.50 6.00
+    ## ATI             0.89 3.58 0.98 1.33 5.78
+    ## Behoerden       0.79 2.69 0.78 1.00 4.67
+    ## Szenario_B_BI   0.94 4.16 1.10 1.00 6.00
+    ## Szenario_B_ATT  0.94 4.21 1.14 1.00 6.00
+    ## Privatsphäre    0.90 3.64 1.22 1.00 6.00
+    ## Vertrauen       0.84 3.77 1.10 1.00 6.00
+    ## Bedienbarkeit   0.78 4.78 0.76 1.00 6.00
+    ## Zeitersparnis   0.84 4.69 1.02 1.00 6.00
+
 \#Hypothesentests —- \#Zusammenhangshypothese 1 —-
 
     ## 
