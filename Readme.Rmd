@@ -10,6 +10,7 @@ library(tidyverse)
 library(ggthemes)
 library(AachenColorPalette)
 library(jmv)
+library(plotrix)
 
 df <- readRDS("data/data.rds")
 ```
@@ -58,40 +59,6 @@ Operationaliserung stellt Forschungslücke dar, Itemformulierung mit ChatGPT res
 
 Erwartung an Zeitaufwand/Zeiteffizienz: intervallskaliert -> Likert-Skala (2 Items) 
 Operationaliserung stellt Forschungslücke dar, Items in Anlehnung an ChatGPT umformuliert
-
-```{r, echo = FALSE}
-ggplot(df) +
-  aes(x = Age) +
-  geom_histogram(bins = 30L, fill = aachen_color("magenta")) +
-  geom_vline(xintercept = mean(df$Age, na.rm = TRUE)) +
-  geom_text(x = mean(df$Age, na.rm = TRUE), y = 25, label = paste0("M = ", round(mean(df$Age, na.rm = TRUE), 2)), angle = 90 , vjust = 1.5) +
-  labs(x = "Alter in Jahren", 
-       y = "Anzahl", 
-       title = paste0("Altersverteilung an Fragebogen teilgenommenn n = (", nrow(df), ")"),
-       subtitle = "Histogramm der Altersverteilung", 
-       caption = "30 Bins") +
-  theme_minimal()
-```
-
-```{r, echo=FALSE}
-df %>% 
- filter(Gender == "Männlich" | Gender == "Weiblich") %>% 
- ggplot() +
- aes(x = ATI, 
-     y = Gender) +
- geom_boxplot(fill = aachen_color("purple", "turquoise")) +
- labs(x = "ATI", 
-      y = "Geschlecht", 
-      title = "Männer haben deskriptiv einen höheren KUT als Frauen", 
-      subtitle = "Deskriptiver Vergleich im Boxplot", 
-      caption = "Punkte zeigen Außreißer") +
-  coord_flip() +
-  scale_x_continuous(limits = c(1,6), breaks = c(1:6)) +
- theme_minimal()
-
-
-ggsave(filename = "boxplot.png", width = 15, height = 12, units = "cm")
-```
 
 
 # Hypothesen 
@@ -167,8 +134,54 @@ df$Bildungsabschluss %>%
   recode(`(noch) kein Schulabschluss` = "kein Hochschulabschluss", `Hauptschulabschluss` = "kein Hochschulabschluss", `Realschulabschluss` = "kein Hochschulabschluss", `Abitur` = "kein Hochschulabschluss", `Hochschulabschluss`= "Hochschulabschluss") %>% 
   as.factor() -> df$Bildungsabschluss4Anova
 
-ANOVA(df, dep = "Szenario_B_BI", factors = c("Bildungsabschluss4Anova", "Wohnort4Anova"))
+#jmv::ANOVA(df, dep = Szenario_B_BI, factors = c("Bildungsabschluss4Anova", "Wohnort4Anova"))
+
+result <- jmv::ANOVA(df, dep = Szenario_B_BI, factors = c("Bildungsabschluss4Anova", "Wohnort4Anova"), 
+           emmPlots = TRUE, emmTables = TRUE, emMeans = list(c("Bildungsabschluss4Anova"), c("Wohnort4Anova"),
+                                                             c("Bildungsabschluss4Anova", "Wohnort4Anova"),
+                                                             c("Wohnort4Anova", "Bildungsabschluss4Anova")))
+result
+
+interaktionseffekt <- result$emm[[3]]$emmTable$asDF
 ```
+
+
+#Diagramm komplexe Unterschiedhypothese
+
+
+```{r}
+interaktionseffekt %>% 
+  ggplot() +
+  aes(x = Bildungsabschluss4Anova, y = mean, colour = Wohnort4Anova, ymin = lower, ymax = upper, group = Wohnort4Anova ) +
+  geom_errorbar(width = 0.2, colour = aachen_color("black")) +
+  geom_point(size = 3) +
+  geom_line() +
+  scale_colour_manual(values=aachen_color("turquoise","orange")) + 
+  ylim(3.5,5) +
+  theme_gray() +
+  labs(title = "Hybride Interaktion von Bildungsabschluss und Wohnort", 
+       subtitle = "Faktor: Bildungsabschluss", 
+       x = "Bildungsabschluss",
+       y = "Nutzungsintention [3,5 - 5]",
+       colour = "",
+       caption = "") +
+  theme(title = element_text(face = "bold", size = 10), 
+        axis.text.x = element_text(face = "bold", size = 10))
+#ggsave("anovaplotimage/C_IE1.png", width = 15, height = 10, units = "cm")
+```
+
+
+
+#lineare Regression 1
+```{r}
+jmv::linReg(df,
+            dep = c("Szenario_B_BI"),
+            covs = c("Behoerden", "ATI"),
+            blocks = c("ATI", "Behoerden"),
+            r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
+```
+#lineare Regression 2
+
 
 #Diagrame zu den Hypothesen
 
