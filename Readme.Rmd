@@ -105,7 +105,9 @@ descriptives[,c(5,1:4)]
 
 
 #Hypothesentests ----
+
 #Zusammenhangshypothese 1 ----
+
 1. Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
 -> Pearson-Korrelation 
 
