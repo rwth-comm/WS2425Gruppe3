@@ -64,13 +64,6 @@ Beispiel Deutscher Großstädter
 
 # Operationalisierung
 
-Wir behandeln die Variable der Benutzerfreundlichkeit und verwenden
-dafür die “System Usability Scale” in 10 Items.
-
-Benutzerfreundlichkeit: System Usability Scale (SUS) nach [Lewis
-(2018)](https://doi.org/10.1080/10447318.2018.1455307 "Lewis, J. R. (2018). The System Usability Scale: Past, Present, and Future. International Journal of Human-Computer Interaction, 34(7), 577–590. https://doi.org/10.1080/10447318.2018.1455307"),
-übersetzt nach QUELLE in 10 Items.
-
 Alter: intervallskaliert
 
 Geschlecht: nominalskaliert
@@ -123,10 +116,6 @@ Komplexe Zusammenhangshypothese
     höher die Technikaffinität einer Person, desto bewusster ist die
     Nutzungsintention eines KI-Chatbots. -&gt; Multiple lineare
     Regression
-
-2.  Die Nutzungsintention eines KI-Chatbots ist abhängig von der
-    Benutzerfreundlichkeit des Chatbots und der Technikaffinität einer
-    Person. -&gt; Multiple lineare Regression
 
 Komplexe Unterschiedshypothese
 
@@ -186,9 +175,13 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
-\#Zusammenhangshypothese 2 —- 2. Es gibt einen Zusammenhang zwischen der
-generellen Einstellung gegenüber der Kommunalverwaltung und dem
-Vertrauen in den KI-Chatbot.
+\#Zusammenhangshypothese 2 —-
+
+1.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
+    gegenüber der Kommunalverwaltung und dem Vertrauen in den
+    KI-Chatbot.
+
+<!-- -->
 
     cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
 
@@ -210,8 +203,12 @@ Vertrauen in den KI-Chatbot.
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
-\#Zusammenhangshypothese 3 —- 3. Es gibt einen Zusammenhang zwischen der
-Nutzungsintention und dem Zeitaufwand. -&gt; Pearson-Korrelation
+\#Zusammenhangshypothese 3 —-
+
+1.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
+    Zeitaufwand. -&gt; Pearson-Korrelation
+
+<!-- -->
 
     cor.test(df$Zeitersparnis, df$Szenario_B_BI, method = "pearson")
 
@@ -233,9 +230,12 @@ Nutzungsintention und dem Zeitaufwand. -&gt; Pearson-Korrelation
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
-\#Zusammenhangsypothese 4 —- 4. Es gibt eine Zusammenhang zwischen der
-Privatsphärewahrnehmung und der Offenheit einer Person. -&gt;
-Pearson-Korrelation
+\#Zusammenhangsypothese 4 —-
+
+1.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
+    der Offenheit einer Person. -&gt; Pearson-Korrelation
+
+<!-- -->
 
     cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 
@@ -258,6 +258,10 @@ Pearson-Korrelation
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 \#komplexe Unterschiedshypothese —-
+
+Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
+hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend)
+haben einen Einfluss auf die Nutzungsintention. -&gt; ANOVA
 
     table(df$Wohnort)
 
@@ -384,6 +388,10 @@ Pearson-Korrelation
 
 \#lineare Regression 1
 
+Je besser die Einstellung gegenüber der Kommunalverwaltung und je höher
+die Technikaffinität einer Person, desto bewusster ist die
+Nutzungsintention eines KI-Chatbots.
+
     jmv::linReg(df,
                 dep = c("Szenario_B_BI"),
                 covs = c("Behoerden", "ATI"),
@@ -434,8 +442,6 @@ Pearson-Korrelation
     ##    ATI           0.12884019    0.07209843     1.7870042     0.0751935         0.11457840   
     ##    Behoerden    -0.05434170    0.09048818    -0.6005392     0.5487113        -0.03850513   
     ##  ─────────────────────────────────────────────────────────────────────────────────────────
-
-\#lineare Regression 2
 
 \#Diagrame zu den Hypothesen
 

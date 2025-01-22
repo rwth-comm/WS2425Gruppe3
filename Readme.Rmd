@@ -32,10 +32,6 @@ Welche Faktoren beeinflussen die Akzeptanz eines KI-Chatbots zur Informationsver
 
 # Operationalisierung
 
-Wir behandeln die Variable der Benutzerfreundlichkeit und verwenden dafür die "System Usability Scale" in 10 Items.
-
-Benutzerfreundlichkeit: System Usability Scale (SUS) nach [Lewis (2018)](https://doi.org/10.1080/10447318.2018.1455307 "Lewis, J. R. (2018). The System Usability Scale: Past, Present, and Future. International Journal of Human-Computer Interaction, 34(7), 577–590. https://doi.org/10.1080/10447318.2018.1455307"), übersetzt nach QUELLE in 10 Items.
-
 Alter: intervallskaliert
 
 Geschlecht: nominalskaliert
@@ -82,8 +78,6 @@ Komplexe Zusammenhangshypothese
 1. Je besser die Einstellung gegenüber der Kommunalverwaltung und je höher die Technikaffinität einer Person, desto bewusster ist die Nutzungsintention eines KI-Chatbots.
 -> Multiple lineare Regression
 
-2. Die Nutzungsintention eines KI-Chatbots ist abhängig von der Benutzerfreundlichkeit des Chatbots und der Technikaffinität einer Person.
--> Multiple lineare Regression 
 
 Komplexe Unterschiedshypothese
 
@@ -131,6 +125,7 @@ ggplot(df) +
 ```
 
 #Zusammenhangshypothese 2 ----
+
 2. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 
 ```{r}
@@ -155,6 +150,7 @@ ggplot(df) +
 ```
 
 #Zusammenhangshypothese 3 ----
+
 3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
 -> Pearson-Korrelation
 
@@ -181,6 +177,7 @@ theme_minimal()
 ```
 
 #Zusammenhangsypothese 4 ----
+
 4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person.
 -> Pearson-Korrelation 
 
@@ -206,6 +203,10 @@ ggplot(df) +
 ```
 
 #komplexe Unterschiedshypothese ----
+
+Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss, hoher Schulabschluss) und Wohnort (ländlichen oder städtischen Gegend) haben einen Einfluss auf die Nutzungsintention.
+-> ANOVA
+
 ```{r}
 table(df$Wohnort)
 table(df$Bildungsabschluss)
@@ -257,6 +258,9 @@ interaktionseffekt %>%
 
 
 #lineare Regression 1
+
+Je besser die Einstellung gegenüber der Kommunalverwaltung und je höher die Technikaffinität einer Person, desto bewusster ist die Nutzungsintention eines KI-Chatbots.
+
 ```{r}
 jmv::linReg(df,
             dep = c("Szenario_B_BI"),
@@ -264,7 +268,6 @@ jmv::linReg(df,
             blocks = c("ATI", "Behoerden"),
             r2Adj = TRUE, stdEst = TRUE, modelTest = TRUE)
 ```
-#lineare Regression 2
 
 
 #Diagrame zu den Hypothesen
