@@ -127,7 +127,9 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ## Bedienbarkeit   0.78 4.78 0.76 1.00 6.00
     ## Zeitersparnis   0.84 4.69 1.02 1.00 6.00
 
-\#Hypothesentests —- \#Zusammenhangshypothese 1 —-
+\#Hypothesentests —- \#Zusammenhangshypothese 1 —- 1. Es gibt einen
+Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
+-&gt; Pearson-Korrelation
 
     ## 
     ##  Pearson's product-moment correlation
@@ -141,7 +143,21 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##        cor 
     ## -0.2282838
 
-\#Zusammenhangshypothese 2 —-
+\#Diagramm zu Zusammenhangshypothe 1 —-
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+    ## Warning: Removed 5 rows containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 5 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+\#Zusammenhangshypothese 2 —- 2. Es gibt einen Zusammenhang zwischen der
+generellen Einstellung gegenüber der Kommunalverwaltung und dem
+Vertrauen in den KI-Chatbot.
 
     cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
 
@@ -157,7 +173,14 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##        cor 
     ## 0.07557501
 
-\#Zusammenhangshypothese 3 —-
+\#Diagramm zu Zusammenhangshypothese 2 —-
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
+\#Zusammenhangshypothese 3 —- 3. Es gibt einen Zusammenhang zwischen der
+Nutzungsintention und dem Zeitaufwand. -&gt; Pearson-Korrelation
 
     cor.test(df$Zeitersparnis, df$Szenario_B_BI, method = "pearson")
 
@@ -173,7 +196,15 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##       cor 
     ## 0.5603058
 
-\#Zusammenhangsypothese 4 —-
+\#Diagramm zu Zusammenhangshypothese 3 —-
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+
+\#Zusammenhangsypothese 4 —- 4. Es gibt eine Zusammenhang zwischen der
+Privatsphärewahrnehmung und der Offenheit einer Person. -&gt;
+Pearson-Korrelation
 
     cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 
@@ -188,6 +219,12 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ## sample estimates:
     ##        cor 
     ## 0.01921928
+
+\#Diagramm Zusammenhangshypothese 4
+
+    ## `geom_smooth()` using formula = 'y ~ x'
+
+![](Readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 \#komplexe Unterschiedshypothese —-
 
@@ -286,7 +323,7 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ##                               Großstadt          4.618280    0.1355720    4.351176    4.885383   
     ##  ───────────────────────────────────────────────────────────────────────────────────────────────
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-6-1.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-6-2.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-6-3.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-6-4.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-10-1.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-10-2.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-10-3.png)![](Readme_files/figure-markdown_strict/unnamed-chunk-10-4.png)
 
     interaktionseffekt <- result$emm[[3]]$emmTable$asDF
 
@@ -310,7 +347,7 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
       theme(title = element_text(face = "bold", size = 10), 
             axis.text.x = element_text(face = "bold", size = 10))
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
     #ggsave("anovaplotimage/C_IE1.png", width = 15, height = 10, units = "cm")
 
@@ -386,7 +423,7 @@ Einfache Zusammenhangshypothesen
     ## Warning: Removed 5 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
     gegenüber der Kommunalverwaltung und dem Vertrauen in den
@@ -396,7 +433,7 @@ Einfache Zusammenhangshypothesen
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 1.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
     Zeitaufwand.
@@ -405,7 +442,7 @@ Einfache Zusammenhangshypothesen
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-15-1.png)
 
 1.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
     der Offenheit einer Person.
@@ -414,12 +451,4 @@ Einfache Zusammenhangshypothesen
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](Readme_files/figure-markdown_strict/unnamed-chunk-12-1.png)
-
-Komplexe Unterschiedshypothese
-
-1.  Schulabschluss (niedriger Schulabschluss, mittlerer Schulabschluss,
-    hoher Schulabschluss) und Wohnort (ländlichen oder städtischen
-    Gegend) haben einen Einfluss auf die Nutzungsintention.
-
-![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](Readme_files/figure-markdown_strict/unnamed-chunk-16-1.png)
