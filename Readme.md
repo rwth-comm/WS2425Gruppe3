@@ -1,5 +1,25 @@
     library(tidyverse)
 
+    ## Warning: Paket 'tidyverse' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'ggplot2' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'tibble' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'tidyr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'readr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'purrr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'dplyr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'stringr' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'forcats' wurde unter R Version 4.4.2 erstellt
+
+    ## Warning: Paket 'lubridate' wurde unter R Version 4.4.2 erstellt
+
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -12,8 +32,14 @@
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
     library(ggthemes)
+
+    ## Warning: Paket 'ggthemes' wurde unter R Version 4.4.2 erstellt
+
     library(AachenColorPalette)
     library(jmv)
+
+    ## Warning: Paket 'jmv' wurde unter R Version 4.4.2 erstellt
+
     library(plotrix)
 
     df <- readRDS("data/data.rds")
@@ -127,9 +153,14 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
     ## Bedienbarkeit   0.78 4.78 0.76 1.00 6.00
     ## Zeitersparnis   0.84 4.69 1.02 1.00 6.00
 
-\#Hypothesentests —- \#Zusammenhangshypothese 1 —- 1. Es gibt einen
-Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
--&gt; Pearson-Korrelation
+\#Hypothesentests —-
+
+\#Zusammenhangshypothese 1 —-
+
+1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
+    den KI-Chatbot. -&gt; Pearson-Korrelation
+
+<!-- -->
 
     ## 
     ##  Pearson's product-moment correlation
