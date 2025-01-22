@@ -146,10 +146,8 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 \#Zusammenhangshypothese 1 —-
 
-1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
-    den KI-Chatbot. -&gt; Pearson-Korrelation
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den
+KI-Chatbot. -&gt; Pearson-Korrelation
 
     ## 
     ##  Pearson's product-moment correlation
@@ -177,11 +175,8 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 \#Zusammenhangshypothese 2 —-
 
-1.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
-    gegenüber der Kommunalverwaltung und dem Vertrauen in den
-    KI-Chatbot.
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber
+der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 
     cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
 
@@ -205,10 +200,8 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 \#Zusammenhangshypothese 3 —-
 
-1.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
-    Zeitaufwand. -&gt; Pearson-Korrelation
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
+Zeitaufwand. -&gt; Pearson-Korrelation
 
     cor.test(df$Zeitersparnis, df$Szenario_B_BI, method = "pearson")
 
@@ -232,10 +225,8 @@ werden. Somit ist das ein schwacher bis mittelstarker Effekt
 
 \#Zusammenhangsypothese 4 —-
 
-1.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
-    der Offenheit einer Person. -&gt; Pearson-Korrelation
-
-<!-- -->
+Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der
+Offenheit einer Person. -&gt; Pearson-Korrelation
 
     cor.test(df$Privatsphäre, df$BF_Offenheit, method = "pearson")
 
@@ -447,10 +438,8 @@ Nutzungsintention eines KI-Chatbots.
 
 Einfache Zusammenhangshypothesen
 
-1.  Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in
-    den KI-Chatbot.
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den
+KI-Chatbot.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
@@ -462,29 +451,22 @@ Einfache Zusammenhangshypothesen
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
-1.  Es gibt einen Zusammenhang zwischen der generellen Einstellung
-    gegenüber der Kommunalverwaltung und dem Vertrauen in den
-    KI-Chatbot.
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber
+der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
-1.  Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
-    Zeitaufwand.
-
-<!-- -->
+Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem
+Zeitaufwand.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
 ![](Readme_files/figure-markdown_strict/unnamed-chunk-15-1.png)
 
-1.  Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und
-    der Offenheit einer Person.
-
-<!-- -->
+Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der
+Offenheit einer Person.
 
     ## `geom_smooth()` using formula = 'y ~ x'
 

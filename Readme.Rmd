@@ -102,7 +102,7 @@ descriptives[,c(5,1:4)]
 
 #Zusammenhangshypothese 1 ----
 
-1. Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
+Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
 -> Pearson-Korrelation 
 
 ```{r, echo=FALSE}
@@ -126,7 +126,7 @@ ggplot(df) +
 
 #Zusammenhangshypothese 2 ----
 
-2. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
+Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 
 ```{r}
 cor.test(df$Behoerden, df$Vertrauen, method = "pearson")
@@ -151,7 +151,7 @@ ggplot(df) +
 
 #Zusammenhangshypothese 3 ----
 
-3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
+Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
 -> Pearson-Korrelation
 
 ```{r}
@@ -178,7 +178,7 @@ theme_minimal()
 
 #Zusammenhangsypothese 4 ----
 
-4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person.
+Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person.
 -> Pearson-Korrelation 
 
 ```{r}
@@ -274,7 +274,7 @@ jmv::linReg(df,
 
 Einfache Zusammenhangshypothesen
 
-1. Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
+Es gibt einen Zusammenhang zwischen dem Alter und dem Vertrauen in den KI-Chatbot.
 
 ```{r, echo=FALSE}
 ggplot(df) +
@@ -290,7 +290,7 @@ ggplot(df) +
 ```
 
 
-2. Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
+Es gibt einen Zusammenhang zwischen der generellen Einstellung gegenüber der Kommunalverwaltung und dem Vertrauen in den KI-Chatbot.
 
 ```{r, echo=FALSE}
 ggplot(df) +
@@ -308,7 +308,7 @@ ggplot(df) +
 ```
 
 
-3. Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
+Es gibt einen Zusammenhang zwischen der Nutzungsintention und dem Zeitaufwand. 
 
 ```{r, echo=FALSE}
 ggplot(df) +
@@ -327,7 +327,7 @@ theme_minimal()
 ```
 
 
-4. Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
+Es gibt eine Zusammenhang zwischen der Privatsphärewahrnehmung und der Offenheit einer Person. 
 
 ```{r, echo=FALSE}
 ggplot(df) +
