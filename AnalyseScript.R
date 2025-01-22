@@ -35,7 +35,6 @@ raw.short$Gender %>%
   recode(`1` = "Männlich", `2` = "Weiblich", `3` = "Divers", `4`= "keine Angabe") %>% 
   as.factor() -> raw.short$Gender
 
-
 raw.short$Bildungsabschluss %>% 
   ordered(levels = c(1:5),
           labels = c("(noch) kein Schulabschluss", 
@@ -50,7 +49,21 @@ raw.short$Wohnort %>%
                      "Vorort/Kleinstadt", 
                      "Großstadt")) -> raw.short$Wohnort
 
+# Geschlechterverhältnis
+table(raw.short$Gender)
+table(raw.short.quality$Gender)
 
+#Alter (min, max, M, SD)
+summary(raw.short$Age)
+summary(raw.short.quality$Age)
+
+#Bildungsabschluss
+table(raw.short$Bildungsabschluss)
+table(raw.short.quality$Bildungsabschluss)
+
+#Wohnort
+table(raw.short$Wohnort)
+table(raw.short.quality$Wohnort)
 
 # Qualitätskontrolle ----
 
@@ -80,6 +93,7 @@ scores <- scoreItems(schluesselliste, items = raw.short, min = 1, max = 6)
 scores$alpha
 
 data <- bind_cols(raw.short, scores$scores)
+
 
 # Daten exportieren ----
 write_rds(data, "data/data.rds")
